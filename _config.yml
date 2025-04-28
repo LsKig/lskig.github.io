@@ -1,0 +1,23 @@
+title: Gikls Wiki
+email: your-email@example.com
+description: >-
+  Сайт для моей базы Obsidian и обмена информацией
+baseurl: ""
+domain: gikls.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://gikls.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+github_username:  gikls
+
+theme: just-the-docs
+
+# Поддержка Markdown в `_pages`
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"  # Использует `_layouts/page.html`
