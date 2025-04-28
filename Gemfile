@@ -9,8 +9,6 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 3.10.0"
 gem "github-pages", "~> 232", group: :jekyll_plugins
-gem "just-the-docs"
-
 
 # Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
 # do not have a Java counterpart.
@@ -18,4 +16,8 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 group :jekyll_plugins do
   gem "jekyll-timeago", "~> 0.13.1"
+  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-seo-tag", "~> 2.6"
+  gem "jekyll-include-cache"
+  gem "jekyll-sitemap"
 end
