@@ -4,9 +4,6 @@ layout: default
 nav_order: 2
 description: Марбас
 parent: Гоэтия
----
-
----
 aliases:
   - Барбасон
   - Барбас

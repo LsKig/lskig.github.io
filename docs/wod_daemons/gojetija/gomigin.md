@@ -4,9 +4,6 @@ layout: default
 nav_order: 2
 description: Гомигин
 parent: Гоэтия
----
-
----
 aliases:
   - Гомигм
   - Самигина
