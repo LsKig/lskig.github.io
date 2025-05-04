@@ -1,7 +1,7 @@
 ---
 title: Свойства человеческой психики
 layout: default
-nav_order: 1
+nav_order: 5
 description: Свойства человеческой психики
 parent: Персонажи
 ---
