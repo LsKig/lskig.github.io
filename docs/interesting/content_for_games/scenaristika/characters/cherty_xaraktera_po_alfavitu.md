@@ -1,7 +1,7 @@
 ---
 title: Черты характера персонажей
 layout: default
-nav_order: 1
+nav_order: 4
 description: Список черт характера для персонажей
 parent: Персонажи
 ---

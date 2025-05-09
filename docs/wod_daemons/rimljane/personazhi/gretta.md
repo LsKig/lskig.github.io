@@ -15,5 +15,6 @@ parent: Персонажи Демоны Римляне
 
 ### История Взаимодействий
 - Правит кости, знает яды. 
-- Знает про больную руку Феликса. 
+- Лечила [Лесбией](/docs/wod_daemons/rimljane/personazhi/lesbia) после того как ее покалечил [Гилон](/docs/wod_daemons/rimljane/personazhi/gilon)
+- Знает про больную руку [Феликса](/docs/wod_daemons/rimljane/demonjugi/feliks). 
 - Есть грибы с глюцинациями. 

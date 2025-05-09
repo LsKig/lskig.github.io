@@ -1,7 +1,7 @@
 ---
 title: Черты интересного персонажа
 layout: default
-nav_order: 1
+nav_order: 4
 description: Черты интересного персонажа
 parent: Персонажи
 ---
