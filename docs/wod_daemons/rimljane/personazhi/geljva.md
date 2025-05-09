@@ -14,7 +14,7 @@ parent: Персонажи Демоны Римляне
 |Описание: | Владелеца барделя. Главная шлюха.|
 
 ### История Взаимодействий
-- Знает [Нумерия](/docs/wod_daemons/rimljane/demonjugi/numeriĭ), потому что его люди ходят в бардель. 
+- Знает [Нумерия](/docs/wod_daemons/rimljane/demonjugi/numeriĭ), потому что его люди ходят в бардель. 
 - Хочет отомстить торговцу, за то что обидел одну из девочек.
 - Не соврала по поводу разговоров [Касия](/docs/wod_daemons/rimljane/personazhi/kassija) и [Спруно](/docs/wod_daemons/rimljane/personazhi/spruno).
 - Хочет чтобы все было потихому. 

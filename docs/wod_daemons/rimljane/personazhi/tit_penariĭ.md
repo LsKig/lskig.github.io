@@ -12,9 +12,9 @@ parent: Персонажи Демоны Римляне
 |Отношение к нам: |Дружба|
 |Наше отношение: |Дружба|
 |Способности: ||
-|Описание: | Знакомый [Нумерия](/docs/wod_daemons/rimljane/demonjugi/numeriĭ), который у него на крючке. |
+|Описание: | Знакомый [Нумерия](/docs/wod_daemons/rimljane/demonjugi/numeriĭ), который у него на крючке. |
 
 ### История Взаимодействий
 
-- Выпили с [Нумерием](/docs/wod_daemons/rimljane/demonjugi/numeriĭ). 
+- Выпили с [Нумерием](/docs/wod_daemons/rimljane/demonjugi/numeriĭ). 
 - Знает о интересных ребятах.

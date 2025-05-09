@@ -15,7 +15,7 @@ parent: Персонажи Демоны Римляне
 
 ### История Взаимодействий
 - После очередного похода был выгнан за провал задания, после чего скитался
-- [Феликс](/docs/wod_daemons/rimljane/demonjugi/feliks), и [Нумерий](/docs/wod_daemons/rimljane/demonjugi/numeriĭ), его взяли.
+- [Феликс](/docs/wod_daemons/rimljane/demonjugi/feliks), и [Нумерий](/docs/wod_daemons/rimljane/demonjugi/numeriĭ), его взяли.
 - Орудует мечом.
 - Поймал копье на тренировке.
 - Сражался с [Эротом](/docs/wod_daemons/rimljane/personazhi/jerot) и [Эфтиком](/docs/wod_daemons/rimljane/personazhi/jeftik) на тренировке.

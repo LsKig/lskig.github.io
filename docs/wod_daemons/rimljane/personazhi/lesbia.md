@@ -14,6 +14,6 @@ parent: Персонажи Демоны Римляне
 |Описание: | Проститутка, которую покалечил [Гилон](/docs/wod_daemons/rimljane/personazhi/gilon)|
 
 ### Истоиря Взаимодействий
-- [Нумерий](/docs/wod_daemons/rimljane/demonjugi/numeriĭ), исцелил ее.
+- [Нумерий](/docs/wod_daemons/rimljane/demonjugi/numeriĭ), исцелил ее.
 - Она договор Нумерия.
 
