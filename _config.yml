@@ -7,6 +7,7 @@ domain: gikls.github.io       # if you want to force HTTPS, specify the domain w
 url: https://gikls.github.io  # the base hostname and protocol for your site, e.g. http://example.com
 github_username:  gikls
 
+color_scheme: reading
 
 lsi: false
 safe: true
