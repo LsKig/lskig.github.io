@@ -1,8 +1,8 @@
 ---
-title: Виды конфликта
+title: Трех-актная структура
 layout: default
 nav_order: 5
-description: Виды конфликта 
+description: Применение трех-актной структуры с примерами
 parent: Структура
 ---
 
