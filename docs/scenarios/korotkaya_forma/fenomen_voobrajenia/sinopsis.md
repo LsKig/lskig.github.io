@@ -3,7 +3,7 @@ title: Синопсис
 layout: default
 nav order: 4
 description: Общее описание мира и сюжета
-parent: Феномен Воображения
+parent: Феномен воображения
 ---
 
 ### Лор: 
