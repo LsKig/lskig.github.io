@@ -1,5 +1,5 @@
 ---
-title: Черты характера персонажей
+title: Черты персонажа
 layout: default
 nav_order: 4
 description: Список черт характера для персонажей
