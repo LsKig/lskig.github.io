@@ -6,5 +6,4 @@ description: Определения понятия жанра
 parent: Понятия
 ---
 
-
 # {{page.title}}
