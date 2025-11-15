@@ -1,5 +1,5 @@
 ---
-title: Клинки во тьме - Генераторы
+title: Клинки во тьме - таблицы
 layout: default
 nav_order: 2
 parent: Генераторы
