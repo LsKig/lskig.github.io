@@ -42,6 +42,23 @@
 
   <script src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
 
+  <script src="{{ '/assets/js/dice-generator.js' | relative_url }}"></script>
+
+  <script>
+  window.diceTables = {
+    {% for table_file in site.data.tables %}
+      "{{ table_file[0] }}": {
+        name: "{{ table_file[1].name }}",
+        table: {
+          {% for entry in table_file[1].table %}
+            "{{ entry[0] }}": "{{ entry[1] }}"{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        }
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% include_cached favicon.html %}
