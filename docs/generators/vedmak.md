@@ -27,7 +27,7 @@ parent: Генераторы
 </div>
 
 
-<div class="dice-generator" data-table="vedmak_man_name_cidaris">
+<div class="dice-generator" data-table="vedmak_man_name_cidarian">
   <p> Цидарис:</p>
   <div class="result">
     <div class="dice-result">-</div>
@@ -39,6 +39,23 @@ parent: Генераторы
 ### Женские
 
 <div class="dice-generator" data-table="vedmak_wooman_name_timerian">
+  <p> Тимерия:</p>
+  <div class="result">
+    <div class="dice-result">-</div>
+  </div>
+  <button class="roll-button">⚅</button>
+</div>
+
+<div class="dice-generator" data-table="vedmak_wooman_name_aedirn">
+  <p> Аедирн:</p>
+  <div class="result">
+    <div class="dice-result">-</div>
+  </div>
+  <button class="roll-button">⚅</button>
+</div>
+
+
+<div class="dice-generator" data-table="vedmak_wooman_name_cidarian">
   <p> Тимерия:</p>
   <div class="result">
     <div class="dice-result">-</div>
