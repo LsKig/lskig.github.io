@@ -62,3 +62,60 @@ parent: Генераторы
   </div>
   <button class="roll-button">⚅</button>
 </div>
+
+
+### Гномы
+
+<div class="dice-generator" data-table="vedmak_gnome_male_names">
+  <p> Мужчина:</p>
+  <div class="result">
+    <div class="dice-result">-</div>
+  </div>
+  <button class="roll-button">⚅</button>
+</div>
+
+<div class="dice-generator" data-table="vedmak_gnome_female_names">
+  <p> Женщина:</p>
+  <div class="result">
+    <div class="dice-result">-</div>
+  </div>
+  <button class="roll-button">⚅</button>
+</div>
+
+
+
+### Эльфы
+
+<div class="dice-generator" data-table="vedmak_elf_male_names">
+  <p> Мужчина:</p>
+  <div class="result">
+    <div class="dice-result">-</div>
+  </div>
+  <button class="roll-button">⚅</button>
+</div>
+
+<div class="dice-generator" data-table="vedmak_elf_female_names">
+  <p> Женщина:</p>
+  <div class="result">
+    <div class="dice-result">-</div>
+  </div>
+  <button class="roll-button">⚅</button>
+</div>
+
+### Краснолюды
+
+<div class="dice-generator" data-table="vedmak_dwarf_male_names">
+  <p> Мужчина:</p>
+  <div class="result">
+    <div class="dice-result">-</div>
+  </div>
+  <button class="roll-button">⚅</button>
+</div>
+
+<div class="dice-generator" data-table="vedmak_dwarf_female_names">
+  <p> Женщина:</p>
+  <div class="result">
+    <div class="dice-result">-</div>
+  </div>
+  <button class="roll-button">⚅</button>
+</div>

@@ -1,0 +1,33 @@
+{% comment %}
+Загружаем данные алхимии и передаем в глобальную переменную
+{% endcomment %}
+<script>
+window.alchemyData = {{ site.data.alchemy | jsonify }};
+</script>
+
+<div class="alchemy-module" data-images-base-url="{{ '/assets/images/' | relative_url }}">
+    <h1 class="alchemy-title">⚗️ Алхимическая система</h1>
+
+    <!-- Текущий выбор -->
+    <div class="current-selection" style="display: none;"></div>
+
+    <!-- Слоты для символов -->
+    <div class="slots-container"></div>
+
+    <!-- Палитра символов -->
+    <div class="symbols-palette"></div>
+
+    <!-- Управление -->
+    <div class="controls">
+        <button class="check-btn" disabled>Проверить рецепты</button>
+        <button class="clear-btn">Очистить все</button>
+    </div>
+
+    <!-- Результаты -->
+    <div class="alchemy-results"></div>
+
+    <!-- Подсказка по управлению -->
+    <div class="keyboard-hints">
+        <small>Подсказка: используйте цифры 1-9 для быстрого выбора символов, Escape для очистки, Enter для проверки</small>
+    </div>
+</div>
