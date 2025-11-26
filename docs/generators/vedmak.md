@@ -10,7 +10,7 @@ parent: Генераторы
 ### Мужские
 
 <div class="dice-generator" data-table="vedmak_man_name_timerian">
-  <p> Тимерия:</p>
+  <p> Темерия:</p>
   <div class="result">
     <div class="dice-result">-</div>
   </div>
@@ -39,7 +39,7 @@ parent: Генераторы
 ### Женские
 
 <div class="dice-generator" data-table="vedmak_wooman_name_timerian">
-  <p> Тимерия:</p>
+  <p> Темерия:</p>
   <div class="result">
     <div class="dice-result">-</div>
   </div>
@@ -56,7 +56,7 @@ parent: Генераторы
 
 
 <div class="dice-generator" data-table="vedmak_wooman_name_cidarian">
-  <p> Тимерия:</p>
+  <p> Темерия:</p>
   <div class="result">
     <div class="dice-result">-</div>
   </div>
