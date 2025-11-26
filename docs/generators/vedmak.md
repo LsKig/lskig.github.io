@@ -56,7 +56,7 @@ parent: Генераторы
 
 
 <div class="dice-generator" data-table="vedmak_wooman_name_cidarian">
-  <p> Темерия:</p>
+  <p> Цидарис:</p>
   <div class="result">
     <div class="dice-result">-</div>
   </div>
