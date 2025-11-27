@@ -374,7 +374,7 @@ class AlchemyCraft {
                         <div class="symbol-ingredients">
                             <div class="symbol-header">
                                 <img src="${this.getImageUrl(symbol.image)}" alt="${symbol.name}">
-                                <strong>${symbol.name}:</strong>
+                                <strong>${symbol.name}</strong>
                             </div>
                             <ul>
                                 ${symbol.ingredients.map(ing => `<li>${ing}</li>`).join('')}
