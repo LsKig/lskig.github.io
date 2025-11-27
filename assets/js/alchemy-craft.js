@@ -258,6 +258,7 @@ class AlchemyCraft {
         availableRecipes.forEach(recipe => {
             this.displayPotionRecipe(recipe);
         });
+        this.resultsContainer.scrollIntoView();
     }
 
    findAvailableRecipes(inputSymbols) {
@@ -283,7 +284,8 @@ class AlchemyCraft {
             // Показываем рецепт если есть хотя бы один совпадающий символ
             // ИЛИ если есть все символы (missingSymbols.length === 0)
             const matchedSymbols = requiredSymbols.length - missingSymbols.length;
-            if (matchedSymbols > 0) {
+            const valuebleReceipt = missingSymbols.length <=  Math.ceil(requiredSymbols.length / 2);
+            if (matchedSymbols > 0 && valuebleReceipt) {
                 availableRecipes.push({
                     ...potionData,
                     missingSymbols,
@@ -340,8 +342,23 @@ class AlchemyCraft {
             `;
         }
 
+        const requiredSymbolsHtml = recipe.symbols.map(symbolCode => {
+            const symbol = this.data.symbols[symbolCode];
+            if (!symbol) return '';
+
+            return `
+                <div class="symbol-header">
+                    <img src="${this.getImageUrl(symbol.image)}" alt="${symbol.name}">
+                    <strong>${symbol.name}:</strong>
+                </div>
+            `;
+        }).join('');
+
         let html = `
             <h3>${recipe.name}</h3>
+            <div class="symbol-ingredients-required">
+                ${requiredSymbolsHtml}
+            </div>
             <p class="potion-description">${recipe.description}</p>
             ${statusHtml}
         `;

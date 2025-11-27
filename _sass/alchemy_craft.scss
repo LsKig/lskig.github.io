@@ -46,16 +46,17 @@ $background-transparent: rgba(255, 255, 255, 0.1);
   text-align: left;
   margin-bottom: 0.1rem;
   font-size: 4em;
-  color: #ffd700;
+  color: $grey-lt-300;
 }
 
 .slots-container {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
   padding: 1rem;
+  margin-bottom: 2rem;
   background: rgba(255,255,255,0.1);
-  border-radius: 1px;
+  border-radius: 5px;
 }
 
 .slot {
@@ -129,8 +130,8 @@ $background-transparent: rgba(255, 255, 255, 0.1);
 }
 
 .symbol-option img {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5));
 }
 
@@ -145,16 +146,15 @@ $background-transparent: rgba(255, 255, 255, 0.1);
 }
 
 .check-btn {
-  padding: 1rem 2rem;
-  background: linear-gradient(45deg, #ff6b6b, #ffd700);
-  color: #1e3c72;
-  border: none;
-  border-radius: 2px;
+  padding: 1rem 1rem;
+  background: transparent;
+  color: #f9c58a;
+  border: 2px solid #f9c58a;
+  border-radius: 15px;
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255,107,107,0.3);
 }
 
 .check-btn:hover {
@@ -163,14 +163,15 @@ $background-transparent: rgba(255, 255, 255, 0.1);
 }
 
 .check-btn:disabled {
-  background: #666;
+  color: #424242;
+  border: 2px solid #424242;
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
 }
 
 .clear-btn {
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   background: transparent;
   color: #ff6b6b;
   border: 2px solid #ff6b6b;
@@ -260,13 +261,14 @@ $background-transparent: rgba(255, 255, 255, 0.1);
 }
 
 .symbol-header img {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   margin-right: 0.5rem;
 }
 
 .symbol-header strong {
   color: #ffd700;
+  font-size: 0.7rem;
 }
 
 .symbol-ingredients ul {
@@ -278,6 +280,16 @@ $background-transparent: rgba(255, 255, 255, 0.1);
   list-style-type: circle;
   margin: 0.3rem 0;
   color: #ccc;
+}
+
+.symbol-ingredients-required {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
 }
 
 .current-selection {

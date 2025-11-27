@@ -9,6 +9,9 @@ github_username:  gikls
 
 color_scheme: reading
 
+sass:
+  quiet_deps: true
+
 lsi: false
 safe: true
 incremental: false
