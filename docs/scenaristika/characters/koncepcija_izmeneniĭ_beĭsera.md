@@ -3,7 +3,7 @@ title: Концепция изменений Бейсера
 layout: default
 nav_order: 4
 description: Концепция изменений Бейсера
-parent: Структура
+parent: Персонажи
 ---
 
 # {{page.title}}
