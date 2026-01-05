@@ -1,7 +1,7 @@
 ---
 title: Различия группировок(Фракций) демонов
 layout: default
-nav_order: 1
+nav_order: 3
 description: Различия группировок демонов
 parent: WoD - Demon the Fallen
 ---

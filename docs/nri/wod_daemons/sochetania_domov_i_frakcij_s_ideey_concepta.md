@@ -1,7 +1,7 @@
 ---
 title: Сочетания домов и фракций с идеей концепта
 layout: default
-nav_order: 1
+nav_order: 3
 description: Сочетания домов и фракций с идеей концепта
 parent: WoD - Demon the Fallen
 ---

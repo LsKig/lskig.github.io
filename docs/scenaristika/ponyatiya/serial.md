@@ -6,6 +6,8 @@ description: Определения понятия сериал
 parent: Понятия
 ---
 
+# {{page.title}}
+
 ## Что?: 
 Последовательность [сезонов](/docs/scenaristika/ponyatiya/sezon.html)
 

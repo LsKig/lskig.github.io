@@ -1,7 +1,7 @@
 ---
 title: Ранги Демонов Гоэтии
 layout: default
-nav_order: 1
+nav_order: 3
 description: Список демонов Гоэтии распределенных по рангам.
 parent: WoD - Demon the Fallen
 ---

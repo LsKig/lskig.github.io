@@ -6,6 +6,8 @@ description: Определения понятия серия
 parent: Понятия
 ---
 
+# {{page.title}}
+
 ## Что?:
 Последовательность [актов](/docs/scenaristika/ponyatiya/act.html)
 

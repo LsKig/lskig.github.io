@@ -12,7 +12,7 @@ parent: Понятия
 Фундаментальная вещь, которая порождает героя.
 
 ## Зачем?:
-Одна из двух фундаментальных вещей(вторая [персонаж](/docs/scenaristika/ponyatiya/personaj.html)), от которой можно начать строить повествование. 
+Одна из двух фундаментальных вещей(вторая [персонаж](/docs/scenaristika/ponyatiya/personaj.html)), от которой можно начать строить повествование. И также одна из наших систем ограничений(помимо [жанра](/docs/scenaristika/ponyatiya/janr.html) и [сеттинга](/docs/scenaristika/ponyatiya/setting.html))
 
 ## Как? прописать Мир:  
 - Прописать [Сеттинг](/docs/scenaristika/ponyatiya/setting.html)  

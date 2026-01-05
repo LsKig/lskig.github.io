@@ -1,7 +1,7 @@
 ---
 title: Как Люцифериане видят повторение Войны Гнева 
 layout: default
-nav_order: 1
+nav_order: 3
 description: Как Люцифериане видят повторение Войны Гнева
 parent: WoD - Demon the Fallen
 ---

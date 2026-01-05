@@ -1,7 +1,7 @@
 ---
 title: Гоэтия
 layout: default
-nav_order: 1
+nav_order: 3
 description: Гоэтия
 parent: WoD - Demon the Fallen
 ---

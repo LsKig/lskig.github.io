@@ -1,11 +1,13 @@
 ---
 title: "Глобальная НРИ: Хроники Мира Тьмы"
 layout: default
-nav_order: 1
+nav_order: 2
 description: "Хроники мира тьмы"
 permalink: /chronicle
+parent: Настольные ролевые игры
 ---	
 # {{page.title}}
+
 *(Игроки влияют только на себя и мир, прямое взаимодействие исключено)*  
 
 ![poblius ](/assets/images/wod_chronicles.jpg)

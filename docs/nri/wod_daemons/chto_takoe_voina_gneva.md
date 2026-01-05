@@ -1,7 +1,7 @@
 ---
 title: Что такое Война Гнева
 layout: default
-nav_order: 1
+nav_order: 3
 description: Коротко о Войне Гнева
 parent: WoD - Demon the Fallen
 ---

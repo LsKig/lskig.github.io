@@ -1,7 +1,7 @@
 ---
 title: Смертные грехи Демонов
 layout: default
-nav_order: 1
+nav_order: 3
 description: Смертные грехи Демонов
 parent: WoD - Demon the Fallen
 ---
