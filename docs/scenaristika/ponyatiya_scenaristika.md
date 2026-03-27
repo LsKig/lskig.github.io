@@ -1,5 +1,5 @@
 ---
-title: Понятия
+title: Понятия Сценаристика
 layout: default
 nav_order: 3
 parent: Сценаристика

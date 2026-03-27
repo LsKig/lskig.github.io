@@ -1,0 +1,88 @@
+{% comment %}
+  creatures_card_module.html
+  Использование: {% include creatures_card_module.html creature_key="ghoul" layout="right" %}
+{% endcomment %}
+
+{% assign creature = site.data.creatures.creatures[include.creature_key] %}
+{% assign layout = include.layout | default: "top" %}
+{% assign image_url = include.image_url | default: "/assets/images/creatures/" %}
+
+{% if creature %}
+<div class="creature-module-wrapper layout-{{ layout }}"
+     data-creature-module
+     data-creature-key="{{ include.creature_key }}">
+
+  <!-- Карточка существа -->
+  <div class="creature-card-container">
+    <article class="creature-card"
+             data-creature="{{ include.creature_key }}"
+             aria-label="Карточка существа: {{ creature.name }}">
+
+      <div class="card-image">
+        {% if creature.image %}
+          <img src="{{ image_url }}{{ creature.image }}" alt="{{ creature.name }}" loading="lazy">
+        {% else %}
+          <div class="image-placeholder">Изображение отсутствует</div>
+        {% endif %}
+        {% if creature.cr %}<span class="card-badge">CR {{ creature.cr }}</span>{% endif %}
+      </div>
+
+      <div class="card-content">
+        <h3 class="card-title">{{ creature.name }}</h3>
+        <p class="card-description">{{ creature.description }}</p>
+      </div>
+
+      {% if creature.stats %}
+      <div class="card-stats">
+        {% for stat_key in creature.stats %}
+          {% unless stat_key == "attacks" %}
+          <div class="stat-row">
+            <span class="stat-label">{{ stat_key | capitalize }}:</span>
+            <span class="stat-value">{{ creature.stats[stat_key] }}</span>
+          </div>
+          {% endunless %}
+        {% endfor %}
+        {% if creature.stats.attacks %}
+        <div class="attacks-list">
+          {% for attack in creature.stats.attacks %}
+          <div class="attack-item">
+            <span class="attack-name">{{ attack.name }}</span>
+            <span class="attack-damage">{{ attack.damage }}</span>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% if creature.lore %}
+      <div class="card-lore">{{ creature.lore }}</div>
+      {% endif %}
+    </article>
+  </div>
+
+  <!-- Контейнер для текста (заполняется JS из контента после include) -->
+  <div class="creature-text-content"></div>
+</div>
+
+<!-- Подключаем данные один раз на страницу -->
+{% unless page.creatures_data_loaded %}
+<script>
+  window.creaturesData = {{ site.data.creatures | jsonify }};
+  window.creaturesConfig = { imageUrl: "{{ image_url }}" };
+</script>
+{% assign page.creatures_data_loaded = true %}
+{% endunless %}
+
+{% else %}
+<div class="creature-module-wrapper layout-top">
+  <div class="creature-card-container">
+    <div class="creature-card">
+      <div class="card-content">
+        <p style="color: #ff6b6b;">⚠️ Существо "{{ include.creature_key }}" не найдено</p>
+      </div>
+    </div>
+  </div>
+  <div class="creature-text-content"></div>
+</div>
+{% endif %}

@@ -1,0 +1,46 @@
+# _data/creatures.yml
+creatures:
+  ghoul:
+    name: "Гуль"
+    image: "placeholder.jpg"
+    description: "Нежить, питающаяся трупами. Обитает на кладбищах и полях сражений."
+    stats:
+      hp: "30"
+      armor: "5"
+      resistance: "Низкая"
+      vulnerability: "Серебро, огонь"
+      attacks:
+        - name: "Когти"
+          damage: "1d6+2"
+        - name: "Укус"
+          damage: "1d8+1"
+    lore: "Гули — падшие люди, проклятые за каннибализм."
+    cr: "2"
+  nekker:
+    name: "Неккер"
+    image: "placeholder.jpg"
+    description: "Стаи мелких хищников, охотящихся из засады."
+    stats:
+      hp: "15"
+      armor: "2"
+      resistance: "Высокая к яду"
+      vulnerability: "Огонь"
+      attacks:
+        - name: "Когти"
+          damage: "1d4"
+    lore: "Неккеры живут стаями в пещерах."
+    cr: "1"
+  golem:
+    name: "Голем"
+    image: "placeholder.jpg"
+    description: "Искусственный страж, оживлённый магией."
+    stats:
+      hp: "80"
+      armor: "15"
+      resistance: "Иммунитет к яду"
+      vulnerability: "Электричество"
+      attacks:
+        - name: "Кулак"
+          damage: "2d10+5"
+    lore: "Создаются алхимиками для охраны."
+    cr: "5"
