@@ -3,7 +3,7 @@ title: Спотлайт
 layout: default
 nav_order: 4
 description: Определения понятия спотлайт
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

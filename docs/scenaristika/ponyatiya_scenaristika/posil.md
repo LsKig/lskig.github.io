@@ -3,7 +3,7 @@ title: Посыл
 layout: default
 nav_order: 4
 description: Определения понятия посыла
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

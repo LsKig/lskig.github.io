@@ -3,7 +3,7 @@ title: Сеттинг
 layout: default
 nav_order: 4
 description: Определения понятия сеттинг
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

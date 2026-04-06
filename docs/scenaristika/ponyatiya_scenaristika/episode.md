@@ -3,7 +3,7 @@ title: Эпизод
 layout: default
 nav_order: 4
 description: Определения понятия Эпизод
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

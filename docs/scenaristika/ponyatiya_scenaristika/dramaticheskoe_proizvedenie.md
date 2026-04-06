@@ -3,7 +3,7 @@ title: Драматическое произведение
 layout: default
 nav_order: 4
 description: Определения понятия Драматическое произведение
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

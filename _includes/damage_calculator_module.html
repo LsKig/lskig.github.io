@@ -1,0 +1,215 @@
+{% comment %}
+Модуль калькулятора урона для НРИ "Ведьмак"
+Загружает данные из YAML и инициализирует JS-класс
+{% endcomment %}
+
+{% assign damage_data = site.data.damage %}
+
+<div class="damage-calculator-module"
+     data-weapons-base-url="{{ site.baseurl }}/assets/images/weapons/"
+     data-effects-base-url="{{ site.baseurl }}/assets/images/effects/">
+
+  <h2 class="damage-title">⚔️ Калькулятор урона</h2>
+
+  <!-- Секция атакующего -->
+  <section class="damage-section attacker-section">
+    <h3>🗡️ Атакующий</h3>
+
+    <div class="form-row">
+      <label>
+        Оружие:
+        <select class="weapon-select" data-field="weapon">
+          <option value="">-- Выберите оружие --</option>
+          {% for weapon in damage_data.weapons %}
+          <option value="{{ weapon.key }}"
+                  data-base-damage="{{ weapon.base_damage }}"
+                  data-damage-bonus="{{ weapon.damage_bonus | default: 0 }}"
+                  data-armor-piercing="{{ weapon.armor_piercing | default: false }}"
+                  data-silver="{{ weapon.silver | default: false }}"
+                  data-elemental="{{ weapon.elemental | default: '' }}"
+                  data-holy="{{ weapon.holy | default: false }}">
+            {{ weapon.name }}
+          </option>
+          {% endfor %}
+        </select>
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label>
+        Телосложение (бонус к урону):
+        <input type="number" class="stat-input" data-field="body" min="0" max="10" value="0">
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label class="modifier-checkbox">
+        <input type="checkbox" data-field="strongAttack">
+        Сильная атака (-3 к попаданию, ×2 урона)
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label>
+        Прицеливание (раундов):
+        <select class="aiming-select" data-field="aiming">
+          <option value="0">0 (нет бонуса)</option>
+          <option value="1">1 раунд (+1)</option>
+          <option value="2">2 раунда (+2)</option>
+          <option value="3">3 раунда (+3)</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="modifiers-grid">
+      <label class="modifier-checkbox">
+        <input type="checkbox" data-mod="ambush"> Засада (+5)
+      </label>
+      <label class="modifier-checkbox">
+        <input type="checkbox" data-mod="quickDraw"> Быстрое выхватывание (-3)
+      </label>
+      <label class="modifier-checkbox">
+        <input type="checkbox" data-mod="ricochet"> Рикошет (-5)
+      </label>
+      <label class="modifier-checkbox">
+        <input type="checkbox" data-mod="blinded"> Ослепление (-3)
+      </label>
+      <label class="modifier-checkbox">
+        <input type="checkbox" data-mod="targetDodging"> Цель уклоняется (-2)
+      </label>
+      <label class="modifier-checkbox">
+        <input type="checkbox" data-mod="targetMoving"> Цель движется (-3)
+      </label>
+      <label class="modifier-checkbox">
+        <input type="checkbox" data-mod="targetImmobilized"> Цель обездвижена (+4)
+      </label>
+      <label class="modifier-checkbox">
+        <input type="checkbox" data-mod="targetSilhouetted"> Цель вырисовывается (+2)
+      </label>
+    </div>
+  </section>
+
+  <!-- Секция цели -->
+  <section class="damage-section target-section">
+    <h3>🛡️ Цель</h3>
+
+    <div class="form-row">
+      <label>
+        Тип цели:
+        <select class="target-type-select" data-field="type">
+          <option value="humanoid">Гуманоид</option>
+          <option value="spirit">Дух</option>
+          <option value="elemental_spirit">Дух стихии</option>
+          <option value="monster">Чудовище</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="form-row inline">
+      <label>
+        Защита (базовая):
+        <input type="number" class="defense-input" data-field="defense" min="0" max="30" value="0">
+      </label>
+      <label>
+        Порог устойчивости:
+        <input type="number" class="stability-input" data-field="stabilityThreshold" min="0" max="10" value="0">
+      </label>
+    </div>
+
+    <div class="armor-grid">
+      <h4>Броня по частям тела</h4>
+      <label class="armor-input">
+        Голова:
+        <input type="number" data-part="head" min="0" max="20" value="0">
+      </label>
+      <label class="armor-input">
+        Туловище:
+        <input type="number" data-part="torso" min="0" max="20" value="0">
+      </label>
+      <label class="armor-input">
+        Рука:
+        <input type="number" data-part="arm" min="0" max="20" value="0">
+      </label>
+      <label class="armor-input">
+        Нога:
+        <input type="number" data-part="leg" min="0" max="20" value="0">
+      </label>
+    </div>
+
+    <div class="resistances-grid">
+      <h4>Сопротивления (×1/2 урона)</h4>
+      <label class="resistance-checkbox">
+        <input type="checkbox" data-part="head"> Голова
+      </label>
+      <label class="resistance-checkbox">
+        <input type="checkbox" data-part="torso"> Туловище
+      </label>
+      <label class="resistance-checkbox">
+        <input type="checkbox" data-part="arm"> Рука
+      </label>
+      <label class="resistance-checkbox">
+        <input type="checkbox" data-part="leg"> Нога
+      </label>
+    </div>
+  </section>
+
+  <!-- Секция атаки -->
+  <section class="damage-section attack-section">
+    <h3>🎯 Параметры атаки</h3>
+
+    <div class="form-row inline">
+      <label>
+        Бросок атаки:
+        <input type="number" class="roll-input" data-field="attackRoll" min="1" max="20" value="0">
+        <button type="button" class="roll-btn" data-roll="attack">🎲</button>
+      </label>
+      <label>
+        Бросок защиты:
+        <input type="number" class="roll-input" data-field="defenseRoll" min="1" max="20" value="0">
+        <button type="button" class="roll-btn" data-roll="defense">🎲</button>
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label>
+        Часть тела:
+        <select class="body-part-select" data-field="targetBodyPart">
+          <option value="">Случайно (1d10) - неприцельная</option>
+          <option value="head">Голова (прицельная) - Штраф -6, ×3 урона</option>
+          <option value="torso">Туловище (прицельная) - Штраф -1, ×1 урона</option>
+          <option value="arm">Рука (прицельная) - Штраф -3, ×1/2 урона</option>
+          <option value="leg">Нога (прицельная) - Штраф -2, ×1/2 урона</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="aiming-hint">
+      <small>💡 Если выбрана конкретная часть тела — атака прицельная (применяется штраф к попаданию). Если "Случайно" — неприцельная (нет штрафа).</small>
+    </div>
+  </section>
+
+  <!-- Кнопки управления -->
+  <div class="damage-controls">
+    <button type="button" class="calculate-btn">⚔️ Рассчитать урон</button>
+    <button type="button" class="clear-btn">🗑️ Очистить</button>
+    <button type="button" class="randomize-btn">🎲 Случайные значения</button>
+  </div>
+
+  <!-- Результаты -->
+  <section class="damage-results">
+    <div class="instructions-list">
+      <!-- Сюда будут добавляться инструкции -->
+    </div>
+    <div class="calculation-log">
+      <details>
+        <summary>📋 Лог расчёта</summary>
+        <pre class="log-content"></pre>
+      </details>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  window.damageData = {{ damage_data | jsonify }};
+</script>

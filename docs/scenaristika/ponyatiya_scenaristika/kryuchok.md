@@ -3,7 +3,7 @@ title: Крючок(Хук/Ружьё)
 layout: default
 nav_order: 4
 description: Определения понятия крючка
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

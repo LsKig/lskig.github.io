@@ -3,7 +3,7 @@ title: Голивудский стандарт
 layout: default
 nav_order: 4
 description: Определения понятия голивудского стандарта
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}  

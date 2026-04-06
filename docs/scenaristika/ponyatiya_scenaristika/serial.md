@@ -3,7 +3,7 @@ title: Сериал
 layout: default
 nav_order: 4
 description: Определения понятия сериал
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

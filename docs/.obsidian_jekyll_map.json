@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "files": {
+    "mini_istoriya/kosmo_tyurma/doktor.md": "Мини история/Космо Тюрьма/Доктор.md",
+    "mini_istoriya/kosmo_tyurma/prishelets.md": "Мини история/Космо Тюрьма/Пришелец.md",
+    "mini_istoriya/kosmo_tyurma/zmeyuga.md": "Мини история/Космо Тюрьма/Змеюга.md",
+    "mini_istoriya/kosmo_tyurma/galakticheska_tyurma.md": "Мини история/Космо Тюрьма/Галактическа тюрьма.md",
+    "mini_istoriya/zamok_i_zveri/stsena.md": "Мини история/Замок и звери/Сцена.md"
+  },
+  "folders": {
+    "mini_istoriya.md": "Мини история/",
+    "mini_istoriya/kosmo_tyurma.md": "Мини история/Космо Тюрьма/",
+    "mini_istoriya/zamok_i_zveri.md": "Мини история/Замок и звери/"
+  }
+}

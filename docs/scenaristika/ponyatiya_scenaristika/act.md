@@ -3,7 +3,7 @@ title: Акт
 layout: default
 nav_order: 4
 description: Определения понятия Акт
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

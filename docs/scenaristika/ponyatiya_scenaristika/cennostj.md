@@ -3,7 +3,7 @@ title: Ценность
 layout: default
 nav_order: 4
 description: Определения понятия ценность
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

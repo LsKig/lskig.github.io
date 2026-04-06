@@ -3,7 +3,7 @@ title: Шот
 layout: default
 nav_order: 4
 description: Определения понятия шота
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

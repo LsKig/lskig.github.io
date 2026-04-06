@@ -1,0 +1,55 @@
+# _data/damage.yml
+
+weapons:
+  - key: steel_sword
+    name: Стальной меч
+    base_damage: "1d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: silver_sword
+    name: Серебряный меч
+    base_damage: "1d6"
+    damage_bonus: 2
+    armor_piercing: false
+    silver: true
+    elemental: null
+    holy: false
+
+  - key: witcher_axe
+    name: Топор ведьмака
+    base_damage: "1d8"
+    damage_bonus: 1
+    armor_piercing: true
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: fire_dagger
+    name: Кинжал огня
+    base_damage: "1d4"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: "fire"
+    holy: false
+
+effects:
+  bleeding:
+    name: Кровотечение
+    damage_per_turn: 2
+    description: "2 урона в ход. Снятие: исцеляющее заклинание или Первая помощь со СЛ 15."
+
+  poison:
+    name: Отравление
+    damage_per_turn: 3
+    ignore_armor: true
+    description: "3 урона в ход (не снижается бронёй). Снятие: проверка Устойчивости со СЛ 15."
+
+  burning:
+    name: Горение
+    damage_per_turn: 5
+    description: "5 урона по каждой части тела в ход. Броня поглощает, но огонь наносит 1 урон броне."

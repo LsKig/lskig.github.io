@@ -3,7 +3,7 @@ title: Движок
 layout: default
 nav_order: 4
 description: Определения понятия движок
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

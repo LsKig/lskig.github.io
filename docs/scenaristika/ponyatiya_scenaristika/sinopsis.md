@@ -3,7 +3,7 @@ title: Синопсис
 layout: default
 nav_order: 4
 description: Определения понятия синопсис
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

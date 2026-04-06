@@ -3,7 +3,7 @@ title: Драматургия
 layout: default
 nav_order: 4
 description: Определения понятия драматургии
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

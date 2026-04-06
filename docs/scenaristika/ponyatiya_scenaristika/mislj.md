@@ -3,7 +3,7 @@ title: Мысль
 layout: default
 nav_order: 4
 description: Определения понятия мысль
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

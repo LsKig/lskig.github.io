@@ -3,7 +3,7 @@ title: Сцена
 layout: default
 nav_order: 4
 description: Определения понятия сцены
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

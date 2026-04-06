@@ -3,7 +3,7 @@ title: Мир
 layout: default
 nav_order: 4
 description: Определения понятия мира
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}

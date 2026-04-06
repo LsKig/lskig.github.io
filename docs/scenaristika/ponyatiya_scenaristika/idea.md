@@ -3,7 +3,7 @@ title: Идея
 layout: default
 nav_order: 4
 description: Определения понятия идеи
-parent: Понятия
+parent: Понятия Сценаристика
 ---
 
 # {{page.title}}
