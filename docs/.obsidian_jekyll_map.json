@@ -1,15 +1,44 @@
 {
   "version": 1,
   "files": {
-    "mini_istoriya/kosmo_tyurma/doktor.md": "Мини история/Космо Тюрьма/Доктор.md",
-    "mini_istoriya/kosmo_tyurma/prishelets.md": "Мини история/Космо Тюрьма/Пришелец.md",
-    "mini_istoriya/kosmo_tyurma/zmeyuga.md": "Мини история/Космо Тюрьма/Змеюга.md",
-    "mini_istoriya/kosmo_tyurma/galakticheska_tyurma.md": "Мини история/Космо Тюрьма/Галактическа тюрьма.md",
-    "mini_istoriya/zamok_i_zveri/stsena.md": "Мини история/Замок и звери/Сцена.md"
+    "vedmak/balans_novoi_sistemy.md": "Ведьмак/Баланс новой системы.md",
+    "vedmak/kisan_givai_e.md": "Ведьмак/Кисан-Гивайе.md",
+    "vedmak/pravila_igry/bazovyi_boi.md": "Ведьмак/Правила игры/Базовый бой.md",
+    "vedmak/pravila_igry/magicheskaya_ataka.md": "Ведьмак/Правила игры/Магическая атака.md",
+    "vedmak/pravila_igry/kritcheskie_provaly.md": "Ведьмак/Правила игры/Критческие провалы.md",
+    "vedmak/pravila_igry/distantsionnyi_boi.md": "Ведьмак/Правила игры/Дистанционный бой.md",
+    "vedmak/pravila_igry/modifikatory_oruzhiya_i_broni.md": "Ведьмак/Правила игры/Модификаторы оружия и брони.md",
+    "vedmak/pravila_igry/raschet_urona.md": "Ведьмак/Правила игры/Расчет урона.md",
+    "vedmak/pravila_igry/skakuny_i_transport.md": "Ведьмак/Правила игры/Скакуны и транспорт.md",
+    "vedmak/pravila_igry/modifikatory_ataki.md": "Ведьмак/Правила игры/Модификаторы атаки.md",
+    "vedmak/pravila_igry/bronya.md": "Ведьмак/Правила игры/Броня.md",
+    "vedmak/pravila_igry/lechenie.md": "Ведьмак/Правила игры/Лечение.md",
+    "vedmak/pravila_igry/kriticheskie_raneniya.md": "Ведьмак/Правила игры/Критические ранения.md",
+    "vedmak/pravila_igry/zaschita.md": "Ведьмак/Правила игры/Защита.md",
+    "vedmak/pravila_igry/effekty.md": "Ведьмак/Правила игры/Эффекты.md",
+    "vedmak/pravila_igry/mesto_popadaniya.md": "Ведьмак/Правила игры/Место попадания.md",
+    "vedmak/pravila_igry/ispytanie_protiv_smerti.md": "Ведьмак/Правила игры/Испытание против смерти.md",
+    "vedmak/pravila_igry/blizhnii_boi.md": "Ведьмак/Правила игры/Ближний бой.md",
+    "vedmak/schastlivaya_moneta/zametki_i_klyuchevye_voprosy.md": "Ведьмак/Счастливая монета/Заметки и ключевые вопросы.md",
+    "vedmak/schastlivaya_moneta/harakteristiki_igrokov.md": "Ведьмак/Счастливая монета/Характеристики игроков.md",
+    "vedmak/schastlivaya_moneta/harakteristiki_igry_dlya_igrokov.md": "Ведьмак/Счастливая монета/Характеристики игры для игроков.md",
+    "vedmak/schastlivaya_moneta/klyuchevye_voprosy.md": "Ведьмак/Счастливая монета/Ключевые вопросы.md",
+    "vedmak/schastlivaya_moneta/personazh_kirilla.md": "Ведьмак/Счастливая монета/Персонаж Кирилла.md",
+    "vedmak/schastlivaya_moneta/monstry/kmet.md": "Ведьмак/Счастливая монета/Монстры/Кмет.md",
+    "vedmak/schastlivaya_moneta/monstry/vedma.md": "Ведьмак/Счастливая монета/Монстры/Ведьма.md",
+    "vedmak/schastlivaya_moneta/nps/rasporyaditel_derevni_hoschovoe.md": "Ведьмак/Счастливая монета/НПС/Распорядитель деревни Хощовое.md",
+    "vedmak/schastlivaya_moneta/nps/znaharka_ritualistka.md": "Ведьмак/Счастливая монета/НПС/Знахарка-ритуалистка.md",
+    "vedmak/schastlivaya_moneta/opisaniya/dom_znaharki.md": "Ведьмак/Счастливая монета/Описания/Дом знахарки.md",
+    "vedmak/schastlivaya_moneta/opisaniya/nachalo.md": "Ведьмак/Счастливая монета/Описания/Начало.md",
+    "vedmak/schastlivaya_moneta/opisaniya/vvedenie.md": "Ведьмак/Счастливая монета/Описания/Введение.md",
+    "vedmak/schastlivaya_moneta/opisaniya/elfii_skie_ruiny.md": "Ведьмак/Счастливая монета/Описания/Эльфийские руины.md"
   },
   "folders": {
-    "mini_istoriya.md": "Мини история/",
-    "mini_istoriya/kosmo_tyurma.md": "Мини история/Космо Тюрьма/",
-    "mini_istoriya/zamok_i_zveri.md": "Мини история/Замок и звери/"
+    "vedmak.md": "Ведьмак/",
+    "vedmak/pravila_igry.md": "Ведьмак/Правила игры/",
+    "vedmak/schastlivaya_moneta.md": "Ведьмак/Счастливая монета/",
+    "vedmak/schastlivaya_moneta/monstry.md": "Ведьмак/Счастливая монета/Монстры/",
+    "vedmak/schastlivaya_moneta/nps.md": "Ведьмак/Счастливая монета/НПС/",
+    "vedmak/schastlivaya_moneta/opisaniya.md": "Ведьмак/Счастливая монета/Описания/"
   }
 }
