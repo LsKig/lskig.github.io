@@ -1,8 +1,100 @@
 # _data/damage.yml
 
 weapons:
-  - key: steel_sword
-    name: Стальной меч
+  # МЕЧИ
+  - key: iron_bastard_sword
+    name: Железный полуторный меч
+    base_damage: "2d6"
+    damage_bonus: 2
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: knight_sword
+    name: Рыцарский меч
+    base_damage: "2d6"
+    damage_bonus: 4
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: gleddiff
+    name: Гледдиф
+    base_damage: "3d6"
+    damage_bonus: 2
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: hunting_falchion
+    name: Охотничий фальшион
+    base_damage: "3d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: kriegsword
+    name: Кригсверд
+    base_damage: "4d6"
+    damage_bonus: 4
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: esboda
+    name: Эсбода
+    base_damage: "5d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: kord
+    name: Корд
+    base_damage: "5d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: "bleeding"
+    holy: false
+
+  - key: blade_from_vikkovaro
+    name: Клинок из Викковаро
+    base_damage: "5d6"
+    damage_bonus: 4
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: torruur
+    name: Торруур
+    base_damage: "6d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: "bleeding"
+    holy: false
+
+  # ЛЁГКИЕ КЛИНКИ
+  - key: dagger
+    name: Кинжал
+    base_damage: "1d6"
+    damage_bonus: 2
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: stiletto
+    name: Стилет
     base_damage: "1d6"
     damage_bonus: 0
     armor_piercing: false
@@ -10,31 +102,406 @@ weapons:
     elemental: null
     holy: false
 
-  - key: silver_sword
-    name: Серебряный меч
-    base_damage: "1d6"
+  - key: short_dagger
+    name: Короткий кинжал
+    base_damage: "2d6"
     damage_bonus: 2
     armor_piercing: false
-    silver: true
+    silver: false
+    elemental: "bleeding"
+    holy: false
+
+  - key: jambiya
+    name: Джамбия
+    base_damage: "2d6"
+    damage_bonus: 0
+    armor_piercing: true
+    silver: false
+    elemental: "bleeding"
+    holy: false
+
+  # ТОПОРЫ
+  - key: axe
+    name: Топор
+    base_damage: "2d6"
+    damage_bonus: 1
+    armor_piercing: false
+    silver: false
     elemental: null
     holy: false
 
-  - key: witcher_axe
-    name: Топор ведьмака
-    base_damage: "1d8"
-    damage_bonus: 1
+  - key: battle_axe
+    name: Боевой топор
+    base_damage: "5d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: berserker_axe
+    name: Топор берсерка
+    base_damage: "6d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: "bleeding"
+    holy: false
+
+  # ДРОБЯЩЕЕ
+  - key: brass_knuckles
+    name: Кастет
+    base_damage: "1d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: mace
+    name: Булава
+    base_damage: "5d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: highlander_hammer
+    name: Молот горца
+    base_damage: "6d6"
+    damage_bonus: 2
+    armor_piercing: false
+    silver: false
+    elemental: "disorienting"
+    holy: false
+
+  # ДРЕВКОВОЕ
+  - key: spear
+    name: Копьё
+    base_damage: "3d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: poleaxe
+    name: Секира
+    base_damage: "4d6"
+    damage_bonus: 2
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: red_halberd
+    name: Красная алебарда
+    base_damage: "6d6"
+    damage_bonus: 3
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  # ПОСОХИ
+  - key: staff
+    name: Посох
+    base_damage: "1d6"
+    damage_bonus: 2
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: hooked_staff
+    name: Посох с крюком
+    base_damage: "2d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: iron_staff
+    name: Железный посох
+    base_damage: "3d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: crystal_staff
+    name: Посох с кристаллом
+    base_damage: "2d6"
+    damage_bonus: 2
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  # МЕТАТЕЛЬНОЕ
+  - key: throwing_knife
+    name: Метательный нож
+    base_damage: "1d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: throwing_axe
+    name: Метательный топор
+    base_damage: "2d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: orion
+    name: Орион
+    base_damage: "1d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  # ЛУКИ
+  - key: short_bow
+    name: Короткий лук
+    base_damage: "3d6"
+    damage_bonus: 3
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: long_bow
+    name: Длинный лук
+    base_damage: "4d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: military_bow
+    name: Армейский лук
+    base_damage: "6d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  # АРБАЛЕТЫ
+  - key: hand_crossbow
+    name: Ручной арбалет
+    base_damage: "2d6"
+    damage_bonus: 2
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: crossbow
+    name: Арбалет
+    base_damage: "4d6"
+    damage_bonus: 2
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: monster_hunter_crossbow
+    name: Арбалет охотника на чудовищ
+    base_damage: "6d6"
+    damage_bonus: 0
     armor_piercing: true
     silver: false
     elemental: null
     holy: false
 
-  - key: fire_dagger
-    name: Кинжал огня
-    base_damage: "1d4"
+  # ВТОРАЯ СТРАНИЦА - ДОПОЛНИТЕЛЬНЫЕ МЕЧИ
+  - key: elvenmesser
+    name: Эльфский мессер
+    base_damage: "3d6"
+    damage_bonus: 4
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: vrihedd_blade
+    name: Клинок бригады «Врихедд»
+    base_damage: "4d6"
+    damage_bonus: 4
+    armor_piercing: false
+    silver: false
+    elemental: "bleeding"
+    holy: false
+
+  - key: meteorite_steel_sword
+    name: Меч из метеоритной стали
+    base_damage: "5d6"
     damage_bonus: 0
     armor_piercing: false
     silver: false
-    elemental: "fire"
+    elemental: null
+    holy: false
+
+  - key: gnomish_gvhir
+    name: Гномий гвихир
+    base_damage: "5d6"
+    damage_bonus: 3
+    armor_piercing: false
+    silver: false
+    elemental: "bleeding"
+    holy: false
+
+  - key: blade_from_tir_tochaire
+    name: Клинок из Тир Тохаира
+    base_damage: "6d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: "bleeding"
+    holy: false
+
+  # ЛЁГКИЕ КЛИНКИ (ДОП)
+  - key: nizhuchiy_rondel
+    name: Низушещий рондель
+    base_damage: "2d6"
+    damage_bonus: 2
+    armor_piercing: true
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: redanian_cleaver
+    name: Краснолюдский секач
+    base_damage: "3d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  # ТОПОРЫ (ДОП)
+  - key: redanian_axe
+    name: Краснолюдский топор
+    base_damage: "5d6"
+    damage_bonus: 3
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: gnomish_black_axe
+    name: Гномий чёрный топор
+    base_damage: "6d6"
+    damage_bonus: 2
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  # ДРОБЯЩЕЕ (ДОП)
+  - key: mahakam_martel
+    name: Махакамский мартель
+    base_damage: "5d6"
+    damage_bonus: 0
+    armor_piercing: true
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: meteorite_flail
+    name: Кистень из метеоритной стали
+    base_damage: "6d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  # ДРЕВКОВОЕ (ДОП)
+  - key: redanian_war_hammer
+    name: Краснолюдский боевой молот
+    base_damage: "5d6"
+    damage_bonus: 2
+    armor_piercing: false
+    silver: false
+    elemental: "disorienting"
+    holy: false
+
+  - key: elven_glaive
+    name: Эльфская элефа
+    base_damage: "4d6"
+    damage_bonus: 3
+    armor_piercing: false
+    silver: false
+    elemental: "bleeding"
+    holy: false
+
+  # ПОСОХИ (ДОП)
+  - key: gnomish_staff
+    name: Гномий посох
+    base_damage: "3d6"
+    damage_bonus: 2
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: elven_road_staff
+    name: Эльфский дорожный посох
+    base_damage: "3d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  # ЛУКИ (ДОП)
+  - key: elven_hunting_bow
+    name: Эльфский походный лук
+    base_damage: "4d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: elven_zephyr
+    name: Эльфский зефар
+    base_damage: "6d6"
+    damage_bonus: 0
+    armor_piercing: true
+    silver: false
+    elemental: null
+    holy: false
+
+  # АРБАЛЕТЫ (ДОП)
+  - key: gnomish_hand_crossbow
+    name: Гномий ручной арбалет
+    base_damage: "2d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
+    holy: false
+
+  - key: redanian_heavy_crossbow
+    name: Краснолюдский тяжёлый арбалет
+    base_damage: "5d6"
+    damage_bonus: 0
+    armor_piercing: false
+    silver: false
+    elemental: null
     holy: false
 
 effects:
@@ -53,3 +520,56 @@ effects:
     name: Горение
     damage_per_turn: 5
     description: "5 урона по каждой части тела в ход. Броня поглощает, но огонь наносит 1 урон броне."
+
+  disorienting:
+    name: Дизориентация
+    damage_per_turn: 0
+    description: "Не может действовать. Попасть по нему: проверка со СЛ 10. Снятие: испытание Устойчивости (1 ход) или получение урона."
+
+  freezing:
+    name: Замораживание
+    damage_per_turn: 0
+    description: "Штраф -3 к Скор, -1 к Реа. Снятие: проверка Силы со СЛ 16 (1 действие)."
+
+  stunning:
+    name: Ошеломление
+    damage_per_turn: 0
+    description: "Штраф -2 к атаке и защите. Снятие: Проходит к началу следующего хода."
+
+  intoxicating:
+    name: Опьянение
+    damage_per_turn: 0
+    description: "Штраф -2 к Реа, Лвк, Инт; -3 в Словесной дуэли. 25% шанс забыть события. Снятие: Сон или Cлезы Жен."
+
+  hallucinating:
+    name: Галлюцинации
+    damage_per_turn: 0
+    description: "Видит нереальные вещи. Отличие от реальности: проверка Дедукции со СЛ 15."
+
+  nausea:
+    name: Тошнота
+    damage_per_turn: 0
+    description: "Каждые 3 раунда бросок 1d10 < Тел. При провале -  рвота/позывы. Снятие: проходит в конце раунда."
+
+  suffocating:
+    name: Удушье
+    damage_per_turn: 3
+    ignore_armor: true
+    description: "3 урона в раунд (не снижается бронёй). Снятие: восстановление доступа к воздуху."
+
+  blinding:
+    name: Слепота
+    damage_per_turn: 0
+    description: "Штраф -3 к атакам и защите, -5 к проверкам Внимания (зрение). Снятие**: 1 ход на восстановление зрения."
+
+  knocking_off:
+    name: Сбит с ног
+    damage_per_turn: 0
+    description: "-2 к проверкам атаки и защиты. Снятие: Половина движения на то чтобы подняться"
+
+
+
+
+
+
+

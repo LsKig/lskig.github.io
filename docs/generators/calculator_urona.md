@@ -1,5 +1,5 @@
 ---
-title: Калькулятор урона
+title: Ведьмак - Калькулятор урона
 layout: default
 nav_order: 3
 parent: Генераторы

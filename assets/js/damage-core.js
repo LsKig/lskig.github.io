@@ -121,18 +121,55 @@ class WitcherDamageCalculator {
       bodyPartPenalty = this._getBodyPartAimingPenalty(this.params.attack.targetBodyPart);
     }
 
-    var attackTotal = attackRoll + aimingBonus + strongAttackPenalty + bodyPartPenalty;
+    var ambushPenalty = this.params.attacker.modifiers.ambush ? 5 : 0;
+    var blindedPenalty = this.params.attacker.modifiers.blinded ? -3 : 0;
+    var quickDrawPenalty = this.params.attacker.modifiers.quickDraw ? -3 : 0;
+    var ricochetPenalty = this.params.attacker.modifiers.ricochet ? -5 : 0;
+    var targetDodgingPenalty = this.params.attacker.modifiers.targetDodging ? -2 : 0;
+    var targetImmobilizedPenalty = this.params.attacker.modifiers.targetImmobilized ? 4 : 0;
+    var targetMovingPenalty = this.params.attacker.modifiers.targetMoving ? -3 : 0;
+    var targetSilhouettedPenalty = this.params.attacker.modifiers.targetSilhouetted ? 2 : 0;
+
+
+    var attackTotal = attackRoll + aimingBonus + strongAttackPenalty + bodyPartPenalty + ambushPenalty
+    + blindedPenalty + quickDrawPenalty + ricochetPenalty + targetDodgingPenalty + targetImmobilizedPenalty+
+    targetMovingPenalty + targetSilhouettedPenalty;
+
     var defenseTotal = defenseRoll + this.params.target.defense;
     var diff = attackTotal - defenseTotal;
 
     if (this.params.attack.strongAttack) {
-      this.meta.log.push('Сильная атака: штраф -3 к попаданию');
+      this.meta.log.push('Сильная атака: -3 к попаданию');
     }
     if (aimingBonus > 0) {
       this.meta.log.push('Прицеливание: +' + aimingBonus + ' к попаданию');
     }
     if (bodyPartPenalty < 0) {
       this.meta.log.push('Штраф за часть тела (' + this.params.attack.targetBodyPart + '): ' + bodyPartPenalty + ' к попаданию');
+    }
+    if (this.params.attacker.modifiers.ambush) {
+      this.meta.log.push('Засада: +5 к попаданию');
+    }
+    if (this.params.attacker.modifiers.blinded) {
+      this.meta.log.push('Атакующий ослеплен: -3 к попаданию');
+    }
+    if (this.params.attacker.modifiers.quickDraw) {
+      this.meta.log.push('Штраф за быстрое выхватывание: -3 к попаданию');
+    }
+    if (this.params.attacker.modifiers.ricochet) {
+      this.meta.log.push('Снаряд отрекошетил: -5 к попаданию');
+    }
+    if (this.params.attacker.modifiers.targetDodging) {
+      this.meta.log.push('Цель активно уклоняется: -2 к попаданию');
+    }
+    if (this.params.attacker.modifiers.targetImmobilized) {
+      this.meta.log.push('Цель обездвижена: +4 к попаданию');
+    }
+    if (this.params.attacker.modifiers.targetMoving) {
+      this.meta.log.push('Цель движется: -3 к попаданию');
+    }
+    if (this.params.attacker.modifiers.targetSilhouetted) {
+      this.meta.log.push('Силуэт цели выделяется: +2 к попаданию');
     }
 
     return {
@@ -315,8 +352,8 @@ class WitcherDamageCalculator {
     if (weapon.modifiers.elemental) {
       rawDamage += weapon.modifiers.elemental === 'fire' ? 2 : 1;
     }
-    if (weapon.modifiers.holy) rawDamage += 3;
-    if (weapon.modifiers.silver) rawDamage += 2;
+    if (weapon.modifiers.holy) rawDamage += 3; /// WTF is this
+    if (weapon.modifiers.silver) rawDamage += 2; /// Fix  silver
 
     this.meta.log.push('Базовый урон (до брони): ' + rawDamage);
 
@@ -358,9 +395,11 @@ class WitcherDamageCalculator {
     var critLevelBonus = { light: 3, medium: 5, heavy: 8, lethal: 10 };
     if (crit && crit.level) {
       finalDamage += critLevelBonus[crit.level] || 0;
+      this.meta.log.push('Урон от критического ранения: ' + critLevelBonus[crit.level]);
     }
     if (crit && crit.unabsorbable) {
       finalDamage += crit.unabsorbable;
+      this.meta.log.push('Непоглощаемый доп урон для духов: ' + crit.unabsorbable);
     }
 
     finalDamage = Math.max(0, Math.round(finalDamage));
@@ -403,26 +442,10 @@ class WitcherDamageCalculator {
     }
 
     // Прочность брони
-    if (damage.absorbed > 0 || this.params.weapon.modifiers.armorPiercing) {
+    if ((damage.absorbed > 0  || this.params.weapon.modifiers.armorPiercing ) && this.params.target.type ==  "humanoid") {
       this.instructions.push('Уменьшите прочность брони на ' + partName + ' на 1 пункт.');
     }
 
-    // Множитель части тела
-    if (damage.bodyPartMultiplier === 3) {
-      this.instructions.push('Попадание в голову: урон ×3 (после вычитания брони).');
-    } else if (damage.bodyPartMultiplier === 0.5) {
-      this.instructions.push('Попадание в конечность: урон ×1/2 (после вычитания брони).');
-    }
-
-    // Сопротивление
-    if (damage.hasResistance) {
-      this.instructions.push('У цели есть сопротивление этой части тела: урон ×1/2.');
-    }
-
-    // Сильная атака
-    if (damage.strongAttack) {
-      this.instructions.push('Сильная атака: урон был умножен на 2 (после вычитания брони).');
-    }
 
     // Эффекты критического ранения
     if (crit && crit.effect) {
