@@ -1,5 +1,5 @@
 ---
-title: Алхимия Ведьмак
+title: Ведьмак - Алхимия 
 layout: default
 nav_order: 2
 parent: Генераторы
