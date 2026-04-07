@@ -1,7 +1,8 @@
 ---
 title: "Кисан ГивайЕ"
 layout: default
-nav_order: 2
+nav_order: 3
+
 parent: "Ведьмак"
 ---
 # Кисан ГивайЕ
