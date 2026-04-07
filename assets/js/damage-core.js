@@ -261,13 +261,12 @@ class WitcherDamageCalculator {
         critRoll = d6 <= 4 ? this._rollRange(6, 8) : this._rollRange(9, 10);
       }
     }
-    else if (isAimed && (bodyPart === 'hand' )) {
+    else if (isAimed && (bodyPart === 'arm' )) {
       critRoll = 4;
     }
     else if (isAimed && (bodyPart === 'leg' )) {
       critRoll = 3;
     }
-
     else {
       // Неприцельная или конечности: 2d6
       critRoll = this._rollDice('2d6');
