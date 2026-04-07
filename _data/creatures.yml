@@ -17,7 +17,7 @@ creatures:
     lore: "Гули — падшие люди, проклятые за каннибализм."
     cr: "2"
   nekker:
-    name: "Неккер"
+    name: "Наккер"
     image: "placeholder.jpg"
     description: "Стаи мелких хищников, охотящихся из засады."
     stats:
