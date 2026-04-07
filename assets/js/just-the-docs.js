@@ -104,7 +104,9 @@ function initSearch() {
 
       var index = lunr(function(){
         this.ref('id');
+        this.use(lunr.multiLanguage('en', 'ru'));
         this.field('title', { boost: 200 });
+        this.field('doc', { boost: 100 });
         this.field('content', { boost: 2 });
         {%- if site.search.rel_url != false %}
         this.field('relUrl');
