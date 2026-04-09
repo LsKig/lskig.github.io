@@ -250,10 +250,9 @@ class WitcherDamageCalculator {
     }
 
     var critRoll;
-    var isAimed = !!this.params.attack.targetBodyPart;
 
     // Прицельная атака в голову/торс: 1d6 → маппинг на таблицу
-    if (isAimed && (bodyPart === 'head' || bodyPart === 'torso')) {
+    if (bodyPart === 'head' || bodyPart === 'torso') {
       var d6 = this._rollDice('1d6');
       if (bodyPart === 'head') {
         critRoll = d6 <= 4 ? 11 : 12;
@@ -261,14 +260,13 @@ class WitcherDamageCalculator {
         critRoll = d6 <= 4 ? this._rollRange(6, 8) : this._rollRange(9, 10);
       }
     }
-    else if (isAimed && (bodyPart === 'arm' )) {
+    else if (bodyPart === 'arm' ) {
       critRoll = 4;
     }
-    else if (isAimed && (bodyPart === 'leg' )) {
+    else if (bodyPart === 'leg' ) {
       critRoll = 3;
     }
     else {
-      // Неприцельная или конечности: 2d6
       critRoll = this._rollDice('2d6');
     }
 
@@ -361,6 +359,8 @@ class WitcherDamageCalculator {
     }
     if (weapon.modifiers.holy) rawDamage += 3; /// WTF is this
     if (weapon.modifiers.silver) rawDamage += 2; /// Fix  silver
+
+    rawDamage = Math.max(rawDamage, 0)
 
     this.meta.log.push('Базовый урон (до брони): ' + rawDamage);
 
