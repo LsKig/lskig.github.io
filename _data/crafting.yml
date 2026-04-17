@@ -1,0 +1,2855 @@
+# crafting.yml - Данные для модуля ремесла
+
+# Базовые материалы (не создаются, только добываются/покупаются)
+materials:
+  # Ремесленные материалы
+  ash:
+    name: "Пепел"
+    availability: "П"
+    source: "Костёр и сгоревшие предметы"
+    quantity: "1d10 единиц"
+    dc: 10
+    weight: 0.1
+    price: 1
+
+  coal:
+    name: "Уголь"
+    availability: "О"
+    source: "Костёр, горы или под землёй"
+    quantity: "1d10 единиц"
+    dc: 14
+    weight: 0.1
+    price: 1
+
+  cotton:
+    name: "Хлопок"
+    availability: "О"
+    source: "Поля и плантации"
+    quantity: "1d10 единиц"
+    dc: 12
+    weight: 0.1
+    price: 1
+
+  glass:
+    name: "Стекло"
+    availability: "Р"
+    source: "Покупается"
+    quantity: "—"
+    dc: "—"
+    weight: 0.5
+    price: 5
+
+  # Добавленные материалы для новых рецептов
+  timber:
+    name: "Древесина"
+    availability: "П"
+    source: "Лес"
+    quantity: "2d6 единиц"
+    dc: 8
+    weight: 1
+    price: 3
+
+  oil:
+    name: "Масло"
+    availability: "О"
+    source: "Покупается или изготавливается"
+    quantity: "—"
+    dc: "—"
+    weight: 0.1
+    price: 3
+
+  resin:
+    name: "Смола"
+    availability: "О"
+    source: "Лес"
+    quantity: "1d6 единиц"
+    dc: 10
+    weight: 0.1
+    price: 2
+
+  wax:
+    name: "Воск"
+    availability: "О"
+    source: "Лес и поля"
+    quantity: "1d6 единиц"
+    dc: 12
+    weight: 0.1
+    price: 2
+
+  gemstones:
+    name: "Самоцветы"
+    availability: "У"
+    source: "Горы и под землёй"
+    quantity: "1d6/2 единиц"
+    dc: 24
+    weight: 0.1
+    price: 100
+
+  silk:
+    name: "Шёлк"
+    availability: "Р"
+    source: "Покупается"
+    quantity: "—"
+    dc: "—"
+    weight: 0.1
+    price: 50
+
+  # Шкуры и части животных
+  animal_bones:
+    name: "Кости животных"
+    availability: "О"
+    source: "Чудовища и животные"
+    quantity: "Варьируется"
+    dc: "—"
+    weight: 4
+    price: 8
+
+  cow_hide:
+    name: "Коровья шкура"
+    availability: "О"
+    source: "Покупается"
+    quantity: "—"
+    dc: "—"
+    weight: 5
+    price: 10
+
+  drake_scale:
+    name: "Чешуя драконида"
+    availability: "У"
+    source: "Виверны"
+    quantity: "1d6 единиц"
+    dc: "—"
+    weight: 5
+    price: 30
+
+  feathers:
+    name: "Перья"
+    availability: "П"
+    source: "Птицы"
+    quantity: "1d6 единиц"
+    dc: "—"
+    weight: 0.1
+    price: 4
+
+  wolf_hide:
+    name: "Волчья шкура"
+    availability: "О"
+    source: "Волки"
+    quantity: "3 единицы"
+    dc: "—"
+    weight: 3
+    price: 14
+
+  # Алхимические пропитки и составы
+  darkening_oil:
+    name: "Чернящее масло"
+    availability: "Р"
+    source: "Лес"
+    quantity: "1d6 единиц"
+    dc: 16
+    weight: 0.1
+    price: 24
+
+  dreik_oil:
+    name: "Масло из дрейка"
+    availability: "Р"
+    source: "Реки и морское побережье"
+    quantity: "1d6 единиц"
+    dc: 16
+    weight: 0.1
+    price: 45
+
+  ether_oil:
+    name: "Эфирная смазка"
+    availability: "О"
+    source: "Леса и поля"
+    quantity: "1d10 единиц"
+    dc: 14
+    weight: 0.1
+    price: 8
+
+  acid_solution:
+    name: "Травильная кислота"
+    availability: "О"
+    source: "Пещеры и горы"
+    quantity: "1d10 единиц"
+    dc: 14
+    weight: 0.1
+    price: 2
+
+  fifth_essence:
+    name: "Пятая эссенция"
+    availability: "У"
+    source: "Места силы, маги и бесы"
+    quantity: "Варьируется"
+    dc: "—"
+    weight: 0.1
+    price: 82
+
+  ogre_wax:
+    name: "Огров воск"
+    availability: "О"
+    source: "Пещеры"
+    quantity: "1d10 единиц"
+    dc: 14
+    weight: 0.1
+    price: 10
+
+  whetstone_powder:
+    name: "Точильный порошок"
+    availability: "Р"
+    source: "Горы и пещеры"
+    quantity: "1d6 единиц"
+    dc: 16
+    weight: 0.1
+    price: 32
+
+  tanning_herbs:
+    name: "Дубильные травы"
+    availability: "О"
+    source: "Поля и леса"
+    quantity: "1d10 единиц"
+    dc: 14
+    weight: 0.1
+    price: 3
+
+  # Слитки и минералы
+  dark_iron:
+    name: "Тёмное железо"
+    availability: "У"
+    source: "Горы и под землёй"
+    quantity: "1d6 единиц"
+    dc: 18
+    weight: 1.5
+    price: 52
+
+  glowing_ore:
+    name: "Светящаяся руда"
+    availability: "У"
+    source: "Горы и под землёй"
+    quantity: "1d6/2 единиц"
+    dc: 20
+    weight: 1
+    price: 80
+
+  gold:
+    name: "Золото"
+    availability: "У"
+    source: "Горы и под землёй"
+    quantity: "1d6/2 единиц"
+    dc: 18
+    weight: 1
+    price: 85
+
+  iron:
+    name: "Железо"
+    availability: "Р"
+    source: "Горы и под землёй"
+    quantity: "1d6 единиц"
+    dc: 16
+    weight: 1.5
+    price: 30
+
+  meteorite:
+    name: "Метеорит"
+    availability: "У"
+    source: "Где угодно на поверхности земли"
+    quantity: "1d6/2 единиц"
+    dc: 24
+    weight: 1
+    price: 98
+
+  river_clay:
+    name: "Речная глина"
+    availability: "Р"
+    source: "Реки или их берега"
+    quantity: "1d6 единиц"
+    dc: 14
+    weight: 1.5
+    price: 5
+
+  silver:
+    name: "Серебро"
+    availability: "У"
+    source: "Горы и под землёй"
+    quantity: "1d6/2 единиц"
+    dc: 16
+    weight: 1
+    price: 72
+
+  stone:
+    name: "Камень"
+    availability: "П"
+    source: "Повсеместно"
+    quantity: "2d6 единиц"
+    dc: 8
+    weight: 2
+    price: 4
+
+  zerrikanian_mix:
+    name: "Зерриканская смесь"
+    availability: "Р"
+    source: "Горы или под землёй"
+    quantity: "1d6/2 единиц"
+    dc: 18
+    weight: 0.1
+    price: 30
+
+# ВСЕ рецепты (компоненты и чертежи)
+recipes:
+  # ========== КОМПОНЕНТЫ НОВИЧКА ==========
+  thread:
+    name: "Нитки"
+    type: "component"
+    tier: "novice"
+    dc: 10
+    time: "15 мин."
+    surcharge: 2
+    price: 4
+    ingredients:
+      - item: "cotton"
+        quantity: 2
+
+  canvas:
+    name: "Полотно"
+    type: "component"
+    tier: "novice"
+    dc: 10
+    time: "15 мин."
+    surcharge: 6
+    price: 12
+    ingredients:
+      - item: "thread"
+        quantity: 2
+
+  reinforced_wood:
+    name: "Укреплённое дерево"
+    type: "component"
+    tier: "novice"
+    dc: 12
+    time: "1/2 часа"
+    surcharge: 11
+    price: 21
+    ingredients:
+      - item: "timber"
+        quantity: 2
+      - item: "resin"
+        quantity: 4
+
+  leather:
+    name: "Кожа"
+    type: "component"
+    tier: "novice"
+    dc: 12
+    time: "1 час"
+    surcharge: 19
+    price: 38
+    ingredients:
+      - item: "cow_hide"
+        quantity: 1
+      - item: "tanning_herbs"
+        quantity: 3
+
+  double_canvas:
+    name: "Двойное полотно"
+    type: "component"
+    tier: "novice"
+    dc: 14
+    time: "1/2 часа"
+    surcharge: 15
+    price: 30
+    ingredients:
+      - item: "canvas"
+        quantity: 1
+      - item: "thread"
+        quantity: 2
+
+  reinforced_leather:
+    name: "Укреплённая кожа"
+    type: "component"
+    tier: "novice"
+    dc: 14
+    time: "1/2 часа"
+    surcharge: 32
+    price: 64
+    ingredients:
+      - item: "leather"
+        quantity: 1
+      - item: "wax"
+        quantity: 2
+
+  # ========== КОМПОНЕНТЫ ПОДМАСТЕРЬЯ ==========
+  steel:
+    name: "Сталь"
+    type: "component"
+    tier: "journeyman"
+    dc: 15
+    time: "1 час"
+    surcharge: 35
+    price: 70
+    ingredients:
+      - item: "iron"
+        quantity: 1
+      - item: "coal"
+        quantity: 5
+
+  three_tower_steel:
+    name: "Третогорская сталь"
+    type: "component"
+    tier: "journeyman"
+    dc: 16
+    time: "1 час"
+    surcharge: 43
+    price: 86
+    ingredients:
+      - item: "iron"
+        quantity: 1
+      - item: "coal"
+        quantity: 5
+      - item: "feathers"
+        quantity: 2
+
+  dark_steel:
+    name: "Тёмная сталь"
+    type: "component"
+    tier: "journeyman"
+    dc: 17
+    time: "1 час"
+    surcharge: 55
+    price: 110
+    ingredients:
+      - item: "dark_iron"
+        quantity: 1
+      - item: "coal"
+        quantity: 3
+
+  lyrian_leather:
+    name: "Лирийская кожа"
+    type: "component"
+    tier: "journeyman"
+    dc: 17
+    time: "1 час"
+    surcharge: 40
+    price: 80
+    ingredients:
+      - item: "leather"
+        quantity: 1
+      - item: "ogre_wax"
+        quantity: 1
+      - item: "coal"
+        quantity: 2
+
+  # ========== КОМПОНЕНТЫ МАСТЕРА ==========
+  drake_skin:
+    name: "Кожа драконида"
+    type: "component"
+    tier: "master"
+    dc: 18
+    time: "1 час"
+    surcharge: 39
+    price: 78
+    ingredients:
+      - item: "drake_scale"
+        quantity: 1
+      - item: "tanning_herbs"
+        quantity: 3
+
+  dimerit:
+    name: "Двимерит"
+    type: "component"
+    tier: "master"
+    dc: 20
+    time: "1 час"
+    surcharge: 160
+    price: 320
+    ingredients:
+      - item: "glowing_ore"
+        quantity: 2
+
+  mahakam_steel:
+    name: "Махакамская сталь"
+    type: "component"
+    tier: "master"
+    dc: 22
+    time: "1 час"
+    surcharge: 76
+    price: 152
+    ingredients:
+      - item: "iron"
+        quantity: 1
+      - item: "coal"
+        quantity: 5
+      - item: "ash"
+        quantity: 2
+      - item: "river_clay"
+        quantity: 3
+      - item: "animal_bones"
+        quantity: 3
+
+  mahakam_dimerit:
+    name: "Махакамский двимерит"
+    type: "component"
+    tier: "master"
+    dc: 24
+    time: "1 час"
+    surcharge: 201
+    price: 402
+    ingredients:
+      - item: "glowing_ore"
+        quantity: 2
+      - item: "river_clay"
+        quantity: 3
+      - item: "ash"
+        quantity: 2
+      - item: "animal_bones"
+        quantity: 3
+
+  # ========== ЧЕРТЕЖИ ОРУЖИЯ НОВИЧКА ==========
+  blunt_ammunition:
+    name: "Боеприпасы с затупленным наконечником (×5)"
+    type: "weapon"
+    tier: "novice"
+    dc: 12
+    time: "1 час"
+    surcharge: 37
+    price: 74
+    ingredients:
+      - item: "timber"
+        quantity: 1
+      - item: "iron"
+        quantity: 1
+      - item: "feathers"
+        quantity: 1
+
+  standard_ammunition:
+    name: "Боеприпасы стандартные (×30)"
+    type: "weapon"
+    tier: "novice"
+    dc: 10
+    time: "2 часа"
+    surcharge: 37
+    price: 14
+    ingredients:
+      - item: "timber"
+        quantity: 1
+      - item: "iron"
+        quantity: 1
+      - item: "feathers"
+        quantity: 1
+
+  dagger:
+    name: "Кинжал"
+    type: "weapon"
+    tier: "novice"
+    dc: 8
+    time: "2 часа"
+    surcharge: 33
+    price: 74
+    ingredients:
+      - item: "timber"
+        quantity: 1
+      - item: "iron"
+        quantity: 1
+
+  throwing_knives:
+    name: "Метательные ножи (×3)"
+    type: "weapon"
+    tier: "novice"
+    dc: 8
+    time: "1 час"
+    surcharge: 48
+    price: 74
+    ingredients:
+      - item: "steel"
+        quantity: 1
+
+  brass_knuckles:
+    name: "Кастет"
+    type: "weapon"
+    tier: "novice"
+    dc: 10
+    time: "2 часа"
+    surcharge: 72
+    price: 125
+    ingredients:
+      - item: "steel"
+        quantity: 1
+      - item: "reinforced_wood"
+        quantity: 1
+      - item: "resin"
+        quantity: 3
+      - item: "wax"
+        quantity: 1
+
+  axe:
+    name: "Топор"
+    type: "weapon"
+    tier: "novice"
+    dc: 10
+    time: "3 часа"
+    surcharge: 148
+    price: 306
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 1
+      - item: "steel"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "leather"
+        quantity: 1
+      - item: "resin"
+        quantity: 4
+
+  iron_half_sword:
+    name: "Железный полуторный меч"
+    type: "weapon"
+    tier: "novice"
+    dc: 10
+    time: "5 часов"
+    surcharge: 119
+    price: 240
+    ingredients:
+      - item: "timber"
+        quantity: 1
+      - item: "iron"
+        quantity: 2
+      - item: "leather"
+        quantity: 2
+
+  throwing_axes:
+    name: "Метательные топоры (×3)"
+    type: "weapon"
+    tier: "novice"
+    dc: 10
+    time: "1 час"
+    surcharge: 51
+    price: 116
+    ingredients:
+      - item: "timber"
+        quantity: 1
+      - item: "steel"
+        quantity: 1
+
+  knight_sword:
+    name: "Рыцарский меч"
+    type: "weapon"
+    tier: "novice"
+    dc: 13
+    time: "7 часов"
+    surcharge: 201
+    price: 404
+    ingredients:
+      - item: "timber"
+        quantity: 2
+      - item: "thread"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "steel"
+        quantity: 2
+
+  glaeddiff:
+    name: "Гледдиф"
+    type: "weapon"
+    tier: "novice"
+    dc: 14
+    time: "7 часов"
+    surcharge: 210
+    price: 426
+    ingredients:
+      - item: "timber"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "leather"
+        quantity: 1
+      - item: "iron"
+        quantity: 1
+      - item: "steel"
+        quantity: 2
+      - item: "oil"
+        quantity: 1
+      - item: "resin"
+        quantity: 1
+
+  hunting_falchion:
+    name: "Охотничий фальшион"
+    type: "weapon"
+    tier: "novice"
+    dc: 14
+    time: "7 часов"
+    surcharge: 240
+    price: 486
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "steel"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 4
+
+  orions:
+    name: "Орионы (×3)"
+    type: "weapon"
+    tier: "novice"
+    dc: 12
+    time: "1 час"
+    surcharge: 62
+    price: 125
+    ingredients:
+      - item: "steel"
+        quantity: 1
+      - item: "oil"
+        quantity: 2
+      - item: "river_clay"
+        quantity: 1
+      - item: "ash"
+        quantity: 3
+
+  short_bow:
+    name: "Короткий лук"
+    type: "weapon"
+    tier: "novice"
+    dc: 15
+    time: "8 часов"
+    surcharge: 210
+    price: 434
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 5
+      - item: "thread"
+        quantity: 4
+      - item: "wax"
+        quantity: 2
+      - item: "resin"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 3
+      - item: "iron"
+        quantity: 1
+      - item: "leather"
+        quantity: 2
+
+  spear:
+    name: "Копьё"
+    type: "weapon"
+    tier: "novice"
+    dc: 12
+    time: "6 часов"
+    surcharge: 276
+    price: 562
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 5
+      - item: "steel"
+        quantity: 2
+      - item: "resin"
+        quantity: 2
+      - item: "leather"
+        quantity: 3
+      - item: "thread"
+        quantity: 4
+
+  # ========== ЧЕРТЕЖИ ОРУЖИЯ ПОДМАСТЕРЬЯ ==========
+  armor_piercing_ammunition:
+    name: "Боеприпасы бронебойные (×10)"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 16
+    time: "1 час"
+    surcharge: 110
+    price: 224
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 1
+      - item: "steel"
+        quantity: 1
+      - item: "feathers"
+        quantity: 1
+      - item: "whetstone_powder"
+        quantity: 1
+      - item: "ogre_wax"
+        quantity: 1
+
+  wide_head_ammunition:
+    name: "Боеприпасы с широким наконечником (×10)"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 15
+    time: "1 час"
+    surcharge: 69
+    price: 125
+    ingredients:
+      - item: "timber"
+        quantity: 1
+      - item: "iron"
+        quantity: 1
+      - item: "feathers"
+        quantity: 1
+      - item: "whetstone_powder"
+        quantity: 1
+
+  hand_crossbow:
+    name: "Ручной арбалет"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 15
+    time: "8 часов"
+    surcharge: 214
+    price: 426
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 2
+      - item: "thread"
+        quantity: 4
+      - item: "wax"
+        quantity: 2
+      - item: "resin"
+        quantity: 2
+      - item: "steel"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "ether_oil"
+        quantity: 2
+      - item: "ogre_wax"
+        quantity: 2
+      - item: "iron"
+        quantity: 1
+
+  krieger_sword:
+    name: "Кригсверд"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 16
+    time: "8 часов"
+    surcharge: 438
+    price: 854
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 2
+      - item: "dark_steel"
+        quantity: 3
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "resin"
+        quantity: 4
+      - item: "animal_bones"
+        quantity: 7
+      - item: "steel"
+        quantity: 3
+      - item: "ash"
+        quantity: 2
+
+  long_bow:
+    name: "Длинный лук"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 16
+    time: "8 часов"
+    surcharge: 252
+    price: 712
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 6
+      - item: "thread"
+        quantity: 8
+      - item: "wax"
+        quantity: 4
+      - item: "resin"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 3
+      - item: "steel"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 1
+
+  mace:
+    name: "Булава"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 16
+    time: "8 часов"
+    surcharge: 384
+    price: 786
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 2
+      - item: "steel"
+        quantity: 3
+      - item: "iron"
+        quantity: 2
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "ogre_wax"
+        quantity: 5
+      - item: "resin"
+        quantity: 1
+
+  seax:
+    name: "Секира"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 16
+    time: "8 часов"
+    surcharge: 349
+    price: 690
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 5
+      - item: "dark_steel"
+        quantity: 2
+      - item: "leather"
+        quantity: 2
+      - item: "whetstone_powder"
+        quantity: 1
+      - item: "ether_oil"
+        quantity: 1
+      - item: "canvas"
+        quantity: 1
+
+  stiletto:
+    name: "Стилет"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 16
+    time: "4 часа"
+    surcharge: 184
+    price: 412
+    ingredients:
+      - item: "timber"
+        quantity: 1
+      - item: "resin"
+        quantity: 1
+      - item: "dark_steel"
+        quantity: 1
+      - item: "wax"
+        quantity: 2
+      - item: "darkening_oil"
+        quantity: 1
+      - item: "whetstone_powder"
+        quantity: 2
+      - item: "coal"
+        quantity: 5
+
+  battle_axe:
+    name: "Боевой топор"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 17
+    time: "9 часов"
+    surcharge: 389
+    price: 786
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 4
+      - item: "steel"
+        quantity: 3
+      - item: "leather"
+        quantity: 3
+      - item: "ether_oil"
+        quantity: 4
+      - item: "ogre_wax"
+        quantity: 4
+      - item: "river_clay"
+        quantity: 5
+
+  crossbow:
+    name: "Арбалет"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 17
+    time: "9 часов"
+    surcharge: 343
+    price: 682
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 4
+      - item: "thread"
+        quantity: 5
+      - item: "wax"
+        quantity: 1
+      - item: "resin"
+        quantity: 2
+      - item: "steel"
+        quantity: 3
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "ether_oil"
+        quantity: 2
+      - item: "ogre_wax"
+        quantity: 2
+      - item: "iron"
+        quantity: 1
+
+  esboda:
+    name: "Эсбода"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 17
+    time: "9 часов"
+    surcharge: 481
+    price: 974
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 2
+      - item: "steel"
+        quantity: 3
+      - item: "dark_steel"
+        quantity: 2
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "dreik_oil"
+        quantity: 1
+
+  hooked_staff:
+    name: "Посох с крюком"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 18
+    time: "9 часов"
+    surcharge: 412
+    price: 824
+    ingredients:
+      - item: "timber"
+        quantity: 6
+      - item: "steel"
+        quantity: 1
+      - item: "fifth_essence"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 2
+      - item: "wax"
+        quantity: 3
+      - item: "steel"
+        quantity: 2
+      - item: "acid_solution"
+        quantity: 2
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "thread"
+        quantity: 4
+
+  short_dagger:
+    name: "Короткий кинжал"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 18
+    time: "4 часа"
+    surcharge: 250
+    price: 534
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 1
+      - item: "dark_steel"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "whetstone_powder"
+        quantity: 2
+      - item: "acid_solution"
+        quantity: 4
+      - item: "animal_bones"
+        quantity: 4
+
+  staff:
+    name: "Посох"
+    type: "weapon"
+    tier: "journeyman"
+    dc: 18
+    time: "9 часов"
+    surcharge: 250
+    price: 502
+    ingredients:
+      - item: "timber"
+        quantity: 6
+      - item: "steel"
+        quantity: 1
+      - item: "fifth_essence"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 2
+      - item: "wax"
+        quantity: 2
+
+  # ========== НОВЫЕ ЧЕРТЕЖИ ОРУЖИЯ МАСТЕРА ==========
+  berserker_axe:
+    name: "Топор берсерка"
+    type: "weapon"
+    tier: "master"
+    dc: 25
+    time: "13 часов"
+    surcharge: 722
+    price: 1440
+    ingredients:
+      - item: "mahakam_steel"
+        quantity: 4
+      - item: "reinforced_wood"
+        quantity: 5
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "steel"
+        quantity: 2
+      - item: "resin"
+        quantity: 1
+      - item: "whetstone_powder"
+        quantity: 1
+      - item: "ether_oil"
+        quantity: 1
+
+  crystal_staff:
+    name: "Посох с кристаллом"
+    type: "weapon"
+    tier: "master"
+    dc: 25
+    time: "13 часов"
+    surcharge: 623
+    price: 1296
+    ingredients:
+      - item: "timber"
+        quantity: 6
+      - item: "steel"
+        quantity: 2
+      - item: "fifth_essence"
+        quantity: 4
+      - item: "gemstones"
+        quantity: 1
+      - item: "ether_oil"
+        quantity: 3
+      - item: "wax"
+        quantity: 2
+      - item: "acid_solution"
+        quantity: 4
+      - item: "dreik_oil"
+        quantity: 1
+
+  gorhammer:
+    name: "Молот горца"
+    type: "weapon"
+    tier: "master"
+    dc: 25
+    time: "13 часов"
+    surcharge: 772
+    price: 1440
+    ingredients:
+      - item: "dark_iron"
+        quantity: 5
+      - item: "dark_steel"
+        quantity: 1
+      - item: "reinforced_wood"
+        quantity: 10
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "acid_solution"
+        quantity: 6
+      - item: "animal_bones"
+        quantity: 10
+      - item: "ether_oil"
+        quantity: 4
+      - item: "meteorite"
+        quantity: 1
+
+  iron_staff:
+    name: "Железный посох"
+    type: "weapon"
+    tier: "master"
+    dc: 20
+    time: "10 часов"
+    surcharge: 506
+    price: 1012
+    ingredients:
+      - item: "dark_iron"
+        quantity: 4
+      - item: "dark_steel"
+        quantity: 1
+      - item: "fifth_essence"
+        quantity: 2
+      - item: "leather"
+        quantity: 1
+      - item: "acid_solution"
+        quantity: 4
+      - item: "reinforced_wood"
+        quantity: 1
+
+  djambia:
+    name: "Джамбия"
+    type: "weapon"
+    tier: "master"
+    dc: 20
+    time: "5 часов"
+    surcharge: 342
+    price: 660
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 1
+      - item: "drake_skin"
+        quantity: 1
+      - item: "dark_steel"
+        quantity: 1
+      - item: "steel"
+        quantity: 2
+      - item: "whetstone_powder"
+        quantity: 2
+      - item: "resin"
+        quantity: 1
+      - item: "darkening_oil"
+        quantity: 1
+
+  cord:
+    name: "Корд"
+    type: "weapon"
+    tier: "master"
+    dc: 22
+    time: "11 часов"
+    surcharge: 525
+    price: 1012
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 1
+      - item: "silk"
+        quantity: 1
+      - item: "dark_steel"
+        quantity: 3
+      - item: "resin"
+        quantity: 4
+      - item: "dark_iron"
+        quantity: 1
+      - item: "coal"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "animal_bones"
+        quantity: 7
+
+  monster_crossbow:
+    name: "Арбалет охотника на чудовищ"
+    type: "weapon"
+    tier: "master"
+    dc: 24
+    time: "12 часов"
+    surcharge: 844
+    price: 1686
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 6
+      - item: "dark_steel"
+        quantity: 4
+      - item: "thread"
+        quantity: 6
+      - item: "reinforced_leather"
+        quantity: 3
+      - item: "resin"
+        quantity: 4
+      - item: "ether_oil"
+        quantity: 2
+      - item: "wax"
+        quantity: 3
+      - item: "ogre_wax"
+        quantity: 4
+      - item: "dark_iron"
+        quantity: 3
+      - item: "animal_bones"
+        quantity: 4
+
+  red_halberd:
+    name: "Красная алебарда"
+    type: "weapon"
+    tier: "master"
+    dc: 22
+    time: "11 часов"
+    surcharge: 646
+    price: 1296
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 6
+      - item: "dark_steel"
+        quantity: 3
+      - item: "three_tower_steel"
+        quantity: 2
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "whetstone_powder"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 2
+
+  torruv:
+    name: "Торрур"
+    type: "weapon"
+    tier: "master"
+    dc: 25
+    time: "13 часов"
+    surcharge: 760
+    price: 1462
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 3
+      - item: "dark_steel"
+        quantity: 5
+      - item: "steel"
+        quantity: 2
+      - item: "reinforced_leather"
+        quantity: 3
+      - item: "resin"
+        quantity: 5
+      - item: "ash"
+        quantity: 4
+      - item: "animal_bones"
+        quantity: 2
+      - item: "whetstone_powder"
+        quantity: 1
+
+  vikovaro_blade:
+    name: "Клинок из Виковаро"
+    type: "weapon"
+    tier: "master"
+    dc: 24
+    time: "12 часов"
+    surcharge: 660
+    price: 1282
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 3
+      - item: "dark_steel"
+        quantity: 4
+      - item: "dark_iron"
+        quantity: 2
+      - item: "reinforced_leather"
+        quantity: 3
+      - item: "resin"
+        quantity: 4
+      - item: "ash"
+        quantity: 4
+      - item: "animal_bones"
+        quantity: 3
+
+  army_bow:
+    name: "Армейский лук"
+    type: "weapon"
+    tier: "master"
+    dc: 22
+    time: "11 часов"
+    surcharge: 626
+    price: 1296
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 6
+      - item: "thread"
+        quantity: 8
+      - item: "ether_oil"
+        quantity: 3
+      - item: "wax"
+        quantity: 4
+      - item: "dark_steel"
+        quantity: 4
+      - item: "resin"
+        quantity: 4
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "dreik_oil"
+        quantity: 2
+
+  # ========== ЧЕРТЕЖИ БРОНИ НОВИЧКА ==========
+  aedir_gambeson:
+    name: "Аэдирнский гамбезон"
+    type: "armor"
+    tier: "novice"
+    dc: 12
+    time: "6 часов"
+    surcharge: 131
+    price: 362
+    ingredients:
+      - item: "canvas"
+        quantity: 6
+      - item: "thread"
+        quantity: 6
+      - item: "leather"
+        quantity: 2
+      - item: "oil"
+        quantity: 1
+
+  cavalry_pants:
+    name: "Кавалерийские штаны"
+    type: "armor"
+    tier: "novice"
+    dc: 13
+    time: "7 часов"
+    surcharge: 57
+    price: 112
+    ingredients:
+      - item: "canvas"
+        quantity: 5
+      - item: "thread"
+        quantity: 4
+
+  double_gambeson:
+    name: "Двуслойный гамбезон"
+    type: "armor"
+    tier: "novice"
+    dc: 15
+    time: "8 часов"
+    surcharge: 187
+    price: 374
+    ingredients:
+      - item: "double_canvas"
+        quantity: 5
+      - item: "thread"
+        quantity: 6
+      - item: "tanning_herbs"
+        quantity: 4
+      - item: "canvas"
+        quantity: 4
+      - item: "cotton"
+        quantity: 11
+
+  double_hood:
+    name: "Двуслойный капюшон"
+    type: "armor"
+    tier: "novice"
+    dc: 13
+    time: "4 часа"
+    surcharge: 129
+    price: 262
+    ingredients:
+      - item: "double_canvas"
+        quantity: 2
+      - item: "leather"
+        quantity: 2
+      - item: "thread"
+        quantity: 7
+      - item: "wax"
+        quantity: 4
+
+  double_pants:
+    name: "Двуслойные штаны"
+    type: "armor"
+    tier: "novice"
+    dc: 15
+    time: "8 часов"
+    surcharge: 165
+    price: 336
+    ingredients:
+      - item: "double_canvas"
+        quantity: 6
+      - item: "thread"
+        quantity: 6
+      - item: "cotton"
+        quantity: 6
+      - item: "canvas"
+        quantity: 1
+
+  gambeson:
+    name: "Гамбезон"
+    type: "armor"
+    tier: "novice"
+    dc: 10
+    time: "5 часов"
+    surcharge: 75
+    price: 150
+    ingredients:
+      - item: "canvas"
+        quantity: 6
+      - item: "thread"
+        quantity: 7
+
+  leather_shield:
+    name: "Кожаный щит"
+    type: "armor"
+    tier: "novice"
+    dc: 12
+    time: "3 часа"
+    surcharge: 37
+    price: 74
+    ingredients:
+      - item: "leather"
+        quantity: 1
+      - item: "timber"
+        quantity: 2
+      - item: "tanning_herbs"
+        quantity: 1
+
+  quilted_pants:
+    name: "Стёганые штаны"
+    type: "armor"
+    tier: "novice"
+    dc: 14
+    time: "7 часов"
+    surcharge: 94
+    price: 186
+    ingredients:
+      - item: "canvas"
+        quantity: 5
+      - item: "thread"
+        quantity: 4
+      - item: "cotton"
+        quantity: 9
+      - item: "leather"
+        quantity: 1
+
+  frame_helmet:
+    name: "Каркасный шлем с полумаской"
+    type: "armor"
+    tier: "novice"
+    dc: 15
+    time: "4 часа"
+    surcharge: 152
+    price: 300
+    ingredients:
+      - item: "steel"
+        quantity: 3
+      - item: "animal_bones"
+        quantity: 1
+
+  steel_buckler:
+    name: "Стальной баклер"
+    type: "armor"
+    tier: "novice"
+    dc: 15
+    time: "4 часа"
+    surcharge: 112
+    price: 224
+    ingredients:
+      - item: "steel"
+        quantity: 1
+      - item: "reinforced_wood"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 1
+
+  temerian_shield:
+    name: "Темерский щит"
+    type: "armor"
+    tier: "novice"
+    dc: 16
+    time: "4 часа"
+    surcharge: 172
+    price: 342
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 4
+      - item: "iron"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "ogre_wax"
+        quantity: 3
+
+  verd_hood:
+    name: "Капюшон вердэнского лучника"
+    type: "armor"
+    tier: "novice"
+    dc: 10
+    time: "3 часа"
+    surcharge: 70
+    price: 150
+    ingredients:
+      - item: "canvas"
+        quantity: 2
+      - item: "leather"
+        quantity: 1
+      - item: "thread"
+        quantity: 6
+      - item: "wax"
+        quantity: 3
+
+  # ========== ЧЕРТЕЖИ БРОНИ ПОДМАСТЕРЬЯ ==========
+  reinforced_hood:
+    name: "Усиленный капюшон"
+    type: "armor"
+    tier: "journeyman"
+    dc: 17
+    time: "5 часов"
+    surcharge: 260
+    price: 524
+    ingredients:
+      - item: "leather"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 3
+      - item: "double_canvas"
+        quantity: 3
+      - item: "thread"
+        quantity: 4
+      - item: "ogre_wax"
+        quantity: 1
+
+  reinforced_pants:
+    name: "Усиленные штаны"
+    type: "armor"
+    tier: "journeyman"
+    dc: 16
+    time: "8 часов"
+    surcharge: 187
+    price: 374
+    ingredients:
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "steel"
+        quantity: 1
+      - item: "leather"
+        quantity: 1
+      - item: "thread"
+        quantity: 5
+
+  brigandine:
+    name: "Бригантина"
+    type: "armor"
+    tier: "journeyman"
+    dc: 16
+    time: "8 часов"
+    surcharge: 228
+    price: 450
+    ingredients:
+      - item: "leather"
+        quantity: 3
+      - item: "reinforced_leather"
+        quantity: 3
+
+  chain_hood:
+    name: "Кольчужный капюшон"
+    type: "armor"
+    tier: "journeyman"
+    dc: 16
+    time: "4 часа"
+    surcharge: 192
+    price: 374
+    ingredients:
+      - item: "steel"
+        quantity: 4
+
+  kaedwen_shield:
+    name: "Каэдвенский щит"
+    type: "armor"
+    tier: "journeyman"
+    dc: 19
+    time: "5 часов"
+    surcharge: 300
+    price: 600
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 5
+      - item: "dark_steel"
+        quantity: 1
+      - item: "animal_bones"
+        quantity: 7
+      - item: "leather"
+        quantity: 1
+      - item: "ogre_wax"
+        quantity: 5
+      - item: "wax"
+        quantity: 2
+
+  lyria_jacket:
+    name: "Кожаная куртка из Лирии"
+    type: "armor"
+    tier: "journeyman"
+    dc: 18
+    time: "9 часов"
+    surcharge: 392
+    price: 786
+    ingredients:
+      - item: "lyrian_leather"
+        quantity: 4
+      - item: "thread"
+        quantity: 4
+      - item: "leather"
+        quantity: 2
+      - item: "canvas"
+        quantity: 4
+      - item: "steel"
+        quantity: 1
+
+  lyria_pants:
+    name: "Кожаные штаны из Лирии"
+    type: "armor"
+    tier: "journeyman"
+    dc: 18
+    time: "9 часов"
+    surcharge: 392
+    price: 786
+    ingredients:
+      - item: "lyrian_leather"
+        quantity: 4
+      - item: "thread"
+        quantity: 4
+      - item: "leather"
+        quantity: 2
+      - item: "canvas"
+        quantity: 4
+      - item: "steel"
+        quantity: 1
+
+  steel_shield:
+    name: "Стальной каплевидный щит"
+    type: "armor"
+    tier: "journeyman"
+    dc: 17
+    time: "5 часов"
+    surcharge: 302
+    price: 600
+    ingredients:
+      - item: "steel"
+        quantity: 4
+      - item: "dark_steel"
+        quantity: 1
+      - item: "leather"
+        quantity: 1
+
+  temerian_armet:
+    name: "Темерский армет"
+    type: "armor"
+    tier: "journeyman"
+    dc: 18
+    time: "5 часов"
+    surcharge: 352
+    price: 712
+    ingredients:
+      - item: "steel"
+        quantity: 4
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 1
+      - item: "leather"
+        quantity: 2
+
+  redan_greaves:
+    name: "Реданские поножи"
+    type: "armor"
+    tier: "journeyman"
+    dc: 17
+    time: "9 часов"
+    surcharge: 295
+    price: 600
+    ingredients:
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "leather"
+        quantity: 1
+      - item: "three_tower_steel"
+        quantity: 3
+      - item: "thread"
+        quantity: 5
+      - item: "tanning_herbs"
+        quantity: 3
+      - item: "cotton"
+        quantity: 3
+
+  redan_halberd_armor:
+    name: "Броня реданского алебардщика"
+    type: "armor"
+    tier: "journeyman"
+    dc: 17
+    time: "9 часов"
+    surcharge: 295
+    price: 600
+    ingredients:
+      - item: "thread"
+        quantity: 5
+      - item: "leather"
+        quantity: 2
+      - item: "steel"
+        quantity: 2
+      - item: "three_tower_steel"
+        quantity: 2
+
+  skellige_raider_shield:
+    name: "Щит налётчика со Скеллиге"
+    type: "armor"
+    tier: "journeyman"
+    dc: 18
+    time: "5 часов"
+    surcharge: 240
+    price: 486
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 5
+      - item: "dark_steel"
+        quantity: 1
+      - item: "ogre_wax"
+        quantity: 1
+      - item: "animal_bones"
+        quantity: 5
+      - item: "leather"
+        quantity: 1
+
+  # ========== ЧЕРТЕЖИ БРОНИ МАСТЕРА ==========
+  tophelm:
+    name: "Топфхельм"
+    type: "armor"
+    tier: "master"
+    dc: 19
+    time: "5 часов"
+    surcharge: 431
+    price: 862
+    ingredients:
+      - item: "steel"
+        quantity: 5
+      - item: "reinforced_leather"
+        quantity: 3
+      - item: "thread"
+        quantity: 6
+      - item: "ogre_wax"
+        quantity: 2
+      - item: "canvas"
+        quantity: 1
+
+  hindarsfjall_heavy:
+    name: "Хиндарсфьяльский тяжёлый доспех"
+    type: "armor"
+    tier: "master"
+    dc: 22
+    time: "11 часов"
+    surcharge: 569
+    price: 1124
+    ingredients:
+      - item: "thread"
+        quantity: 6
+      - item: "animal_bones"
+        quantity: 5
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "dreik_oil"
+        quantity: 3
+      - item: "dark_steel"
+        quantity: 4
+
+  hindarsfjall_greaves:
+    name: "Хиндарсфьяльские тяжёлые шоссы"
+    type: "armor"
+    tier: "master"
+    dc: 22
+    time: "11 часов"
+    surcharge: 561
+    price: 1124
+    ingredients:
+      - item: "thread"
+        quantity: 8
+      - item: "animal_bones"
+        quantity: 5
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "leather"
+        quantity: 1
+      - item: "dreik_oil"
+        quantity: 1
+      - item: "dark_steel"
+        quantity: 4
+
+  nilfgaard_greaves:
+    name: "Нильфгаардские поножи"
+    type: "armor"
+    tier: "master"
+    dc: 24
+    time: "12 часов"
+    surcharge: 631
+    price: 1274
+    ingredients:
+      - item: "dark_steel"
+        quantity: 5
+      - item: "ash"
+        quantity: 10
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "leather"
+        quantity: 1
+      - item: "darkening_oil"
+        quantity: 1
+      - item: "oil"
+        quantity: 4
+      - item: "dreik_oil"
+        quantity: 2
+      - item: "canvas"
+        quantity: 1
+
+  nilfgaard_helmet:
+    name: "Нильфгаардский шлем"
+    type: "armor"
+    tier: "master"
+    dc: 24
+    time: "6 часов"
+    surcharge: 537
+    price: 1200
+    ingredients:
+      - item: "dark_steel"
+        quantity: 5
+      - item: "oil"
+        quantity: 5
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "darkening_oil"
+        quantity: 1
+      - item: "dreik_oil"
+        quantity: 1
+      - item: "ash"
+        quantity: 10
+
+  nilfgaard_pavise:
+    name: "Нильфгаардская павеза"
+    type: "armor"
+    tier: "master"
+    dc: 22
+    time: "6 часов"
+    surcharge: 450
+    price: 900
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 10
+      - item: "reinforced_leather"
+        quantity: 3
+      - item: "ogre_wax"
+        quantity: 1
+      - item: "dark_steel"
+        quantity: 1
+      - item: "ether_oil"
+        quantity: 2
+      - item: "darkening_oil"
+        quantity: 1
+      - item: "ash"
+        quantity: 10
+      - item: "acid_solution"
+        quantity: 2
+
+  nilfgaard_plate:
+    name: "Нильфгаардский латный доспех"
+    type: "armor"
+    tier: "master"
+    dc: 24
+    time: "12 часов"
+    surcharge: 637
+    price: 1274
+    ingredients:
+      - item: "dark_steel"
+        quantity: 5
+      - item: "canvas"
+        quantity: 3
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "leather"
+        quantity: 1
+      - item: "darkening_oil"
+        quantity: 1
+      - item: "dreik_oil"
+        quantity: 2
+      - item: "ash"
+        quantity: 10
+
+  pavise:
+    name: "Павеза"
+    type: "armor"
+    tier: "master"
+    dc: 19
+    time: "5 часов"
+    surcharge: 378
+    price: 750
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 10
+      - item: "steel"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 3
+      - item: "ogre_wax"
+        quantity: 1
+      - item: "ether_oil"
+        quantity: 2
+
+  plate_greaves:
+    name: "Латные поножи"
+    type: "armor"
+    tier: "master"
+    dc: 19
+    time: "10 часов"
+    surcharge: 468
+    price: 798
+    ingredients:
+      - item: "steel"
+        quantity: 5
+      - item: "reinforced_leather"
+        quantity: 3
+      - item: "thread"
+        quantity: 7
+      - item: "acid_solution"
+        quantity: 4
+      - item: "dreik_oil"
+        quantity: 1
+      - item: "ogre_wax"
+        quantity: 1
+
+  plate_armor:
+    name: "Латный доспех"
+    type: "armor"
+    tier: "master"
+    dc: 19
+    time: "10 часов"
+    surcharge: 468
+    price: 937
+    ingredients:
+      - item: "steel"
+        quantity: 5
+      - item: "reinforced_leather"
+        quantity: 3
+      - item: "thread"
+        quantity: 7
+      - item: "acid_solution"
+        quantity: 4
+      - item: "dreik_oil"
+        quantity: 1
+      - item: "ogre_wax"
+        quantity: 1
+
+  skellige_helmet:
+    name: "Скеллигский шлем"
+    type: "armor"
+    tier: "master"
+    dc: 22
+    time: "6 часов"
+    surcharge: 527
+    price: 1050
+    ingredients:
+      - item: "dark_steel"
+        quantity: 4
+      - item: "thread"
+        quantity: 6
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "animal_bones"
+        quantity: 5
+      - item: "dreik_oil"
+        quantity: 1
+
+  # ========== ЧЕРТЕЖИ СТАРШЕГО НАРОДА ==========
+  dwarf_axe:
+    name: "Краснолюдский топор"
+    type: "elder_race"
+    tier: "master"
+    dc: 24
+    time: "12 часов"
+    surcharge: 555
+    price: 1110
+    ingredients:
+      - item: "mahakam_steel"
+        quantity: 3
+      - item: "reinforced_wood"
+        quantity: 4
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "acid_solution"
+        quantity: 4
+      - item: "whetstone_powder"
+        quantity: 1
+      - item: "river_clay"
+        quantity: 2
+      - item: "coal"
+        quantity: 3
+
+  dwarf_sekacz:
+    name: "Краснолюдский секач"
+    type: "elder_race"
+    tier: "master"
+    dc: 19
+    time: "10 часов"
+    surcharge: 374
+    price: 750
+    ingredients:
+      - item: "mahakam_steel"
+        quantity: 2
+      - item: "reinforced_wood"
+        quantity: 1
+      - item: "leather"
+        quantity: 1
+      - item: "whetstone_powder"
+        quantity: 1
+      - item: "dreik_oil"
+        quantity: 1
+      - item: "river_clay"
+        quantity: 5
+
+  dwarf_heavy_crossbow:
+    name: "Краснолюдский тяжёлый арбалет"
+    type: "elder_race"
+    tier: "master"
+    dc: 24
+    time: "12 часов"
+    surcharge: 632
+    price: 1274
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 5
+      - item: "mahakam_steel"
+        quantity: 3
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "thread"
+        quantity: 4
+      - item: "ogre_wax"
+        quantity: 5
+      - item: "dark_iron"
+        quantity: 1
+
+  elf_glaive:
+    name: "Эльфская глефа"
+    type: "elder_race"
+    tier: "master"
+    dc: 19
+    time: "10 часов"
+    surcharge: 692
+    price: 1386
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 6
+      - item: "dark_steel"
+        quantity: 4
+      - item: "steel"
+        quantity: 1
+      - item: "leather"
+        quantity: 4
+      - item: "feathers"
+        quantity: 3
+      - item: "whetstone_powder"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 4
+
+  elf_messer:
+    name: "Эльфский мессер"
+    type: "elder_race"
+    tier: "master"
+    dc: 19
+    time: "10 часов"
+    surcharge: 446
+    price: 892
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 2
+      - item: "leather"
+        quantity: 3
+      - item: "dark_steel"
+        quantity: 3
+      - item: "silk"
+        quantity: 1
+      - item: "whetstone_powder"
+        quantity: 1
+      - item: "acid_solution"
+        quantity: 1
+
+  elf_travel_bow:
+    name: "Эльфский походный лук"
+    type: "elder_race"
+    tier: "master"
+    dc: 22
+    time: "11 часов"
+    surcharge: 432
+    price: 862
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 4
+      - item: "thread"
+        quantity: 4
+      - item: "wax"
+        quantity: 4
+      - item: "fifth_essence"
+        quantity: 1
+      - item: "leather"
+        quantity: 1
+      - item: "dark_steel"
+        quantity: 2
+      - item: "feathers"
+        quantity: 3
+      - item: "animal_bones"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 5
+      - item: "acid_solution"
+        quantity: 3
+
+  dwarf_staff:
+    name: "Гномий посох"
+    type: "elder_race"
+    tier: "master"
+    dc: 22
+    time: "11 часов"
+    surcharge: 682
+    price: 1364
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 6
+      - item: "fifth_essence"
+        quantity: 5
+      - item: "dark_steel"
+        quantity: 1
+      - item: "darkening_oil"
+        quantity: 3
+      - item: "double_canvas"
+        quantity: 1
+
+  nizushing_rondel:
+    name: "Низушечий рондель"
+    type: "elder_race"
+    tier: "master"
+    dc: 19
+    time: "10 часов"
+    surcharge: 364
+    price: 726
+    ingredients:
+      - item: "dark_steel"
+        quantity: 2
+      - item: "reinforced_wood"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "whetstone_powder"
+        quantity: 3
+      - item: "darkening_oil"
+        quantity: 1
+      - item: "ether_oil"
+        quantity: 2
+
+  mahakam_martel:
+    name: "Махакамский мартель"
+    type: "elder_race"
+    tier: "master"
+    dc: 22
+    time: "11 часов"
+    surcharge: 675
+    price: 1350
+    ingredients:
+      - item: "mahakam_steel"
+        quantity: 3
+      - item: "reinforced_wood"
+        quantity: 3
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "wolf_hide"
+        quantity: 1
+      - item: "whetstone_powder"
+        quantity: 1
+      - item: "ether_oil"
+        quantity: 3
+      - item: "dreik_oil"
+        quantity: 2
+      - item: "river_clay"
+        quantity: 4
+      - item: "canvas"
+        quantity: 1
+
+  meteorite_sword:
+    name: "Меч из метеоритной стали"
+    type: "elder_race"
+    tier: "master"
+    dc: 20
+    time: "10 часов"
+    surcharge: 650
+    price: 1312
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 2
+      - item: "leather"
+        quantity: 2
+      - item: "whetstone_powder"
+        quantity: 1
+      - item: "acid_solution"
+        quantity: 4
+      - item: "ether_oil"
+        quantity: 4
+      - item: "meteorite"
+        quantity: 5
+
+  vrihedd_blade:
+    name: "Клинок бригады «Врихедд»"
+    type: "elder_race"
+    tier: "master"
+    dc: 24
+    time: "12 часов"
+    surcharge: 558
+    price: 1117
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 2
+      - item: "silk"
+        quantity: 1
+      - item: "dark_steel"
+        quantity: 4
+      - item: "whetstone_powder"
+        quantity: 3
+      - item: "ether_oil"
+        quantity: 4
+      - item: "river_clay"
+        quantity: 4
+
+  # ========== ЧЕРТЕЖИ ВЕЛИКОГО МАСТЕРА ==========
+  dwarf_warhammer:
+    name: "Краснолюдский боевой молот"
+    type: "elder_race"
+    tier: "grandmaster"
+    dc: 25
+    time: "13 часов"
+    surcharge: 624
+    price: 1248
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 6
+      - item: "mahakam_steel"
+        quantity: 3
+      - item: "reinforced_leather"
+        quantity: 3
+      - item: "ogre_wax"
+        quantity: 1
+      - item: "whetstone_powder"
+        quantity: 1
+
+  elf_road_staff:
+    name: "Эльфский дорожный посох"
+    type: "elder_race"
+    tier: "grandmaster"
+    dc: 25
+    time: "13 часов"
+    surcharge: 735
+    price: 1470
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 6
+      - item: "gold"
+        quantity: 1
+      - item: "ether_oil"
+        quantity: 6
+      - item: "silk"
+        quantity: 1
+      - item: "wolf_hide"
+        quantity: 2
+      - item: "dark_steel"
+        quantity: 1
+      - item: "fifth_essence"
+        quantity: 3
+      - item: "gemstones"
+        quantity: 1
+
+  elf_zefar:
+    name: "Эльфский зефар"
+    type: "elder_race"
+    tier: "grandmaster"
+    dc: 25
+    time: "13 часов"
+    surcharge: 830
+    price: 1660
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 8
+      - item: "thread"
+        quantity: 8
+      - item: "ogre_wax"
+        quantity: 8
+      - item: "fifth_essence"
+        quantity: 2
+      - item: "animal_bones"
+        quantity: 4
+      - item: "feathers"
+        quantity: 4
+      - item: "dark_steel"
+        quantity: 3
+      - item: "leather"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 9
+      - item: "acid_solution"
+        quantity: 6
+
+  dwarf_black_axe:
+    name: "Гномий чёрный топор"
+    type: "elder_race"
+    tier: "grandmaster"
+    dc: 25
+    time: "13 часов"
+    surcharge: 688
+    price: 1376
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 4
+      - item: "reinforced_leather"
+        quantity: 2
+      - item: "dimerit"
+        quantity: 1
+      - item: "dark_steel"
+        quantity: 3
+      - item: "ogre_wax"
+        quantity: 1
+      - item: "whetstone_powder"
+        quantity: 1
+
+  dwarf_gvichir:
+    name: "Гномий гвихир"
+    type: "elder_race"
+    tier: "grandmaster"
+    dc: 25
+    time: "13 часов"
+    surcharge: 818
+    price: 1628
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 2
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "dimerit"
+        quantity: 2
+      - item: "dark_steel"
+        quantity: 1
+      - item: "ether_oil"
+        quantity: 3
+      - item: "whetstone_powder"
+        quantity: 4
+      - item: "darkening_oil"
+        quantity: 1
+
+  dwarf_hand_crossbow:
+    name: "Гномий ручной арбалет"
+    type: "elder_race"
+    tier: "grandmaster"
+    dc: 25
+    time: "13 часов"
+    surcharge: 317
+    price: 634
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 2
+      - item: "thread"
+        quantity: 4
+      - item: "dark_steel"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 1
+      - item: "darkening_oil"
+        quantity: 2
+      - item: "resin"
+        quantity: 2
+      - item: "dreik_oil"
+        quantity: 1
+      - item: "wax"
+        quantity: 2
+
+  meteorite_flail:
+    name: "Кистень из метеоритной стали"
+    type: "elder_race"
+    tier: "grandmaster"
+    dc: 25
+    time: "13 часов"
+    surcharge: 676
+    price: 1352
+    ingredients:
+      - item: "meteorite"
+        quantity: 5
+      - item: "ether_oil"
+        quantity: 1
+      - item: "reinforced_wood"
+        quantity: 1
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "dark_steel"
+        quantity: 1
+      - item: "whetstone_powder"
+        quantity: 1
+
+  tir_tochair_blade:
+    name: "Клинок из Тир Тохаира"
+    type: "elder_race"
+    tier: "grandmaster"
+    dc: 26
+    time: "13 часов"
+    surcharge: 888
+    price: 1776
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 2
+      - item: "ash"
+        quantity: 4
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "mahakam_dimerit"
+        quantity: 2
+      - item: "dark_steel"
+        quantity: 1
+      - item: "ether_oil"
+        quantity: 4
+      - item: "whetstone_powder"
+        quantity: 1
+      - item: "drake_skin"
+        quantity: 1
+
+  # ========== ЧЕРТЕЖИ БОЕПРИПАСОВ МАСТЕРА ==========
+  dwarf_piercing_ammo:
+    name: "Краснолюдские пробивные (×5)"
+    type: "ammo"
+    tier: "master"
+    dc: 20
+    time: "1/2 часа"
+    surcharge: 184
+    price: 100
+    ingredients:
+      - item: "mahakam_steel"
+        quantity: 1
+      - item: "reinforced_wood"
+        quantity: 1
+      - item: "feathers"
+        quantity: 1
+      - item: "ogre_wax"
+        quantity: 2
+      - item: "iron"
+        quantity: 1
+
+  elf_screwing_ammo:
+    name: "Эльфские ввинчивающиеся (×5)"
+    type: "ammo"
+    tier: "master"
+    dc: 20
+    time: "1/2 часа"
+    surcharge: 185
+    price: 100
+    ingredients:
+      - item: "dark_steel"
+        quantity: 1
+      - item: "resin"
+        quantity: 1
+      - item: "reinforced_wood"
+        quantity: 1
+      - item: "feathers"
+        quantity: 2
+      - item: "whetstone_powder"
+        quantity: 2
+      - item: "ogre_wax"
+        quantity: 1
+      - item: "thread"
+        quantity: 1
+
+  # ========== БРОНЯ МАСТЕРА (Продолжение) ==========
+  red_cloak:
+    name: "Краснолюдский плащ"
+    type: "armor"
+    tier: "master"
+    dc: 18
+    time: "9 часов"
+    surcharge: 1050
+    price: 2100
+    ingredients:
+      - item: "reinforced_leather"
+        quantity: 12
+      - item: "ogre_wax"
+        quantity: 10
+      - item: "resin"
+        quantity: 10
+      - item: "dreik_oil"
+        quantity: 2
+      - item: "leather"
+        quantity: 6
+      - item: "ether_oil"
+        quantity: 7
+      - item: "thread"
+        quantity: 10
+      - item: "cow_hide"
+        quantity: 1
+
+  elf_shield:
+    name: "Эльфский щит"
+    type: "armor"
+    tier: "master"
+    dc: 20
+    time: "5 часов"
+    surcharge: 528
+    price: 1050
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 5
+      - item: "reinforced_leather"
+        quantity: 5
+      - item: "dark_steel"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 2
+      - item: "acid_solution"
+        quantity: 4
+      - item: "ogre_wax"
+        quantity: 2
+
+  dwarf_buckler:
+    name: "Гномий баклер"
+    type: "armor"
+    tier: "master"
+    dc: 22
+    time: "6 часов"
+    surcharge: 335
+    price: 674
+    ingredients:
+      - item: "dark_steel"
+        quantity: 3
+      - item: "leather"
+        quantity: 1
+      - item: "ether_oil"
+        quantity: 1
+      - item: "acid_solution"
+        quantity: 4
+      - item: "dreik_oil"
+        quantity: 1
+
+  null_protector_dublet:
+    name: "Низушечий защитный дублет"
+    type: "armor"
+    tier: "master"
+    dc: 18
+    time: "9 часов"
+    surcharge: 281
+    price: 562
+    ingredients:
+      - item: "silk"
+        quantity: 4
+      - item: "thread"
+        quantity: 10
+      - item: "cotton"
+        quantity: 7
+      - item: "double_canvas"
+        quantity: 2
+
+  scoia_armor:
+    name: "Броня скоя'таэля"
+    type: "armor"
+    tier: "master"
+    dc: 20
+    time: "20 часов"
+    surcharge: 1738
+    price: 3486
+    ingredients:
+      - item: "dark_steel"
+        quantity: 12
+      - item: "wolf_hide"
+        quantity: 3
+      - item: "ether_oil"
+        quantity: 10
+      - item: "acid_solution"
+        quantity: 12
+      - item: "ash"
+        quantity: 11
+      - item: "double_canvas"
+        quantity: 8
+      - item: "darkening_oil"
+        quantity: 4
+      - item: "reinforced_wood"
+        quantity: 13
+      - item: "dreik_oil"
+        quantity: 2
+      - item: "thread"
+        quantity: 9
+
+  # ========== БРОНЯ ВЕЛИКОГО МАСТЕРА ==========
+  dwarf_chainmail:
+    name: "Кольчуга гномьей работы"
+    type: "armor"
+    tier: "grandmaster"
+    dc: 24
+    time: "24 часа"
+    surcharge: 736
+    price: 1462
+    ingredients:
+      - item: "dark_steel"
+        quantity: 8
+      - item: "leather"
+        quantity: 2
+      - item: "darkening_oil"
+        quantity: 1
+
+  dragoon_armor:
+    name: "Драгунская броня гномьей работы"
+    type: "armor"
+    tier: "grandmaster"
+    dc: 25
+    time: "25 часов"
+    surcharge: 2131
+    price: 4274
+    ingredients:
+      - item: "dark_steel"
+        quantity: 12
+      - item: "meteorite"
+        quantity: 1
+      - item: "mahakam_dimerit"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 10
+      - item: "acid_solution"
+        quantity: 14
+      - item: "double_canvas"
+        quantity: 5
+      - item: "darkening_oil"
+        quantity: 4
+      - item: "dreik_oil"
+        quantity: 2
+      - item: "thread"
+        quantity: 15
+
+  mahakam_pavise:
+    name: "Махакамская павеза"
+    type: "armor"
+    tier: "grandmaster"
+    dc: 26
+    time: "7 часов"
+    surcharge: 788
+    price: 1574
+    ingredients:
+      - item: "reinforced_wood"
+        quantity: 10
+      - item: "reinforced_leather"
+        quantity: 5
+      - item: "ogre_wax"
+        quantity: 11
+      - item: "ether_oil"
+        quantity: 2
+      - item: "mahakam_steel"
+        quantity: 2
+      - item: "acid_solution"
+        quantity: 3
+      - item: "leather"
+        quantity: 1
+
+  mahakam_plate:
+    name: "Махакамские латы"
+    type: "armor"
+    tier: "grandmaster"
+    dc: 28
+    time: "28 часов"
+    surcharge: 2645
+    price: 5286
+    ingredients:
+      - item: "mahakam_steel"
+        quantity: 12
+      - item: "mahakam_dimerit"
+        quantity: 2
+      - item: "ether_oil"
+        quantity: 8
+      - item: "acid_solution"
+        quantity: 12
+      - item: "reinforced_leather"
+        quantity: 5
+      - item: "darkening_oil"
+        quantity: 2
+      - item: "dreik_oil"
+        quantity: 1
+      - item: "meteorite"
+        quantity: 2
+      - item: "ogre_wax"
+        quantity: 3
+      - item: "thread"
+        quantity: 10
+
+  # ========== УСИЛЕНИЯ БРОНИ НОВИЧКА ==========
+  fabric_upgrade:
+    name: "Ткань"
+    type: "armor_upgrade"
+    tier: "novice"
+    dc: 14
+    time: "3 часа"
+    surcharge: 28
+    price: 60
+    ingredients:
+      - item: "double_canvas"
+        quantity: 1
+      - item: "thread"
+        quantity: 2
+
+  riveted_leather_upgrade:
+    name: "Клёпаная кожа"
+    type: "armor_upgrade"
+    tier: "novice"
+    dc: 14
+    time: "3 часа"
+    surcharge: 61
+    price: 120
+    ingredients:
+      - item: "leather"
+        quantity: 1
+      - item: "iron"
+        quantity: 1
+      - item: "thread"
+        quantity: 1
+
+  # ========== УСИЛЕНИЯ БРОНИ ПОДМАСТЕРЬЯ ==========
+  chainmail_upgrade:
+    name: "Кольчужное"
+    type: "armor_upgrade"
+    tier: "journeyman"
+    dc: 17
+    time: "5 часов"
+    surcharge: 96
+    price: 187
+    ingredients:
+      - item: "steel"
+        quantity: 2
+
+  reinforced_leather_armor_upgrade:
+    name: "Укреплённая кожа"
+    type: "armor_upgrade"
+    tier: "journeyman"
+    dc: 16
+    time: "4 часа"
+    surcharge: 97
+    price: 195
+    ingredients:
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "leather"
+        quantity: 1
+      - item: "thread"
+        quantity: 5
+      - item: "wax"
+        quantity: 3
+
+  steel_upgrade:
+    name: "Стальное"
+    type: "armor_upgrade"
+    tier: "journeyman"
+    dc: 18
+    time: "5 часов"
+    surcharge: 109
+    price: 217
+    ingredients:
+      - item: "steel"
+        quantity: 2
+      - item: "thread"
+        quantity: 3
+      - item: "acid_solution"
+        quantity: 2
+
+  # ========== УСИЛЕНИЯ БРОНИ МАСТЕРА ==========
+  elf_armor_upgrade:
+    name: "Эльфское"
+    type: "armor_upgrade"
+    tier: "master"
+    dc: 24
+    time: "6 часов"
+    surcharge: 149
+    price: 300
+    ingredients:
+      - item: "dark_steel"
+        quantity: 1
+      - item: "thread"
+        quantity: 5
+      - item: "reinforced_leather"
+        quantity: 1
+      - item: "feathers"
+        quantity: 1
+
+  dwarf_armor_upgrade:
+    name: "Краснолюдское"
+    type: "armor_upgrade"
+    tier: "master"
+    dc: 24
+    time: "6 часов"
+    surcharge: 144
+    price: 292
+    ingredients:
+      - item: "mahakam_steel"
+        quantity: 1
+      - item: "thread"
+        quantity: 5
+      - item: "wolf_hide"
+        quantity: 1
+      - item: "coal"
+        quantity: 1

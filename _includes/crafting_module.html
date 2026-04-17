@@ -1,0 +1,59 @@
+{% comment %}
+Загружаем данные ремесла и передаем в глобальную переменную
+{% endcomment %}
+<script>
+window.craftingData = {{ site.data.crafting | jsonify }};
+</script>
+
+<div class="crafting-module" data-images-base-url="{{ '/assets/images/crafting/' | relative_url }}">
+    <h1 class="crafting-title">⚒️ Ремесленная мастерская</h1>
+
+    <div class="crafting-layout">
+        <!-- Левая панель: категории и поиск -->
+        <div class="crafting-sidebar">
+            <!-- Обновленный блок поиска с кнопкой -->
+            <div class="crafting-search-container">
+                <div class="crafting-search-wrapper">
+                    <input type="text" class="crafting-search-input" placeholder="Поиск...">
+                    <button class="crafting-search-btn" type="button" title="Найти">
+                        🔍
+                    </button>
+                </div>
+            </div>
+
+            <div class="crafting-categories-container">
+                <!-- Категории будут сгенерированы JS -->
+            </div>
+
+            <!-- Панель инвентаря -->
+            <div class="crafting-inventory-panel">
+                <div class="crafting-empty-inventory">Инвентарь пуст</div>
+            </div>
+        </div>
+
+        <!-- Центральная панель: список предметов -->
+        <div class="crafting-main">
+            <div class="crafting-items-list">
+                <!-- Предметы будут сгенерированы JS -->
+            </div>
+        </div>
+
+        <!-- Правая панель: детали рецепта -->
+        <div class="crafting-detail">
+            <div class="crafting-recipe-detail">
+                <div class="crafting-empty-detail">
+                    <div class="crafting-empty-icon">📋</div>
+                    <p>Выберите рецепт для просмотра</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="crafting-hints">
+        <small>💡 Используйте поиск для быстрого нахождения рецептов. Нажмите на материал в дереве крафта, чтобы добавить его в инвентарь.</small>
+    </div>
+</div>
+
+
+
+

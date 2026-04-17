@@ -1,0 +1,12 @@
+materials:
+  test_item:
+    name: "Тестовый предмет"
+    price: 10
+
+recipes:
+  test_recipe:
+    name: "Тестовый рецепт"
+    type: "component"
+    tier: "novice"
+    dc: 10
+    price: 20
