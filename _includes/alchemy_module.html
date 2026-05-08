@@ -2,7 +2,7 @@
 Загружаем данные алхимии и передаем в глобальную переменную
 {% endcomment %}
 <script>
-window.alchemyData = {{ site.data.alchemy | jsonify }};
+    window.alchemyData = {{ site.data.alchemy | jsonify }};
 </script>
 
 <div class="alchemy-module" data-images-base-url="{{ '/assets/images/' | relative_url }}">
