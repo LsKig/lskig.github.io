@@ -1,5 +1,5 @@
 ---
-title: ЗБЛ(Мочанье Богов) - Крафт 
+title: ЗБЛ(Молчание Богов) - Крафт 
 layout: default
 nav_order: 2
 parent: Генераторы

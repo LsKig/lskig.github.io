@@ -74,9 +74,15 @@ class VadhidekCrafting {
         if (category.id === 'gathering') {
             items = Object.entries(this.data.materials || {}).map(([k, v]) => ({ key: k, ...v }));
         } else {
-            const typeMap = { weapons_armor: ['weapon','weapon_magic','armor'], alchemy: ['potion','poison','oil'], traps_tools: ['trap','tool'] };
+            const typeMap = {
+                weapons_armor: ['weapon', 'weapon_magic', 'armor', 'armor_magic'],
+                alchemy: ['potion', 'poison', 'oil'],
+                traps_tools: ['trap', 'tool']
+            };
             const allowed = typeMap[category.id] || [];
-            items = Object.entries(this.data.recipes || {}).filter(([, r]) => allowed.includes(r.type)).map(([k, r]) => ({ key: k, ...r }));
+            items = Object.entries(this.data.recipes || {})
+                .filter(([, r]) => allowed.includes(r.type))
+                .map(([k, r]) => ({ key: k, ...r }));
         }
         items.sort((a, b) => (parseInt(a.dc) || 0) - (parseInt(b.dc) || 0));
 
@@ -91,9 +97,53 @@ class VadhidekCrafting {
                     </div>
                 </div>
                 <div class="vadhidek-item-preview">
-                    ${i.ingredients ? `<span class="vadhidek-ingredients-count">📋 ${i.ingredients.length} ингр.</span>` : `<span class="vadhidek-material-source">📍 ${i.gathering_method || 'Базовый'}</span>`}
+                    ${i.ingredients
+                        ? `<span class="vadhidek-ingredients-count">📋 ${i.ingredients.length} ингр.</span>`
+                        : `<span class="vadhidek-material-source">📍 ${this.getGatheringMethodName(i.gathering_method)}</span>`}
                 </div>
             </div>`).join('');
+    }
+
+    /**
+     * Преобразует внутренний ключ gathering_method в человекочитаемое название
+     * @param {string|string[]} method - Ключ метода сбора (или массив ключей)
+     * @returns {string} Человекочитаемое название
+     */
+    getGatheringMethodName(method) {
+        if (!method) return 'Базовый';
+
+        // Если массив (растение растёт в нескольких местах)
+        if (Array.isArray(method)) {
+            return method.map(m => this.getGatheringMethodName(m)).join(', ');
+        }
+
+        // Словарь соответствий
+        const methodNames = {
+            // Разделка существ
+            butchering: 'Разделка существ',
+            // Переплавка металлов
+            smelting: 'Переплавка руды',
+
+            // Кости Хияла
+            hiyal_bones: 'Кости Хияла',
+
+            // Травничество по локациям
+            herbs_plains: 'Травничество: Равнины',
+            herbs_swamp: 'Травничество: Болота',
+            herbs_forest: 'Травничество: Леса',
+            herbs_mountains: 'Травничество: Горы',
+            herbs_rivers: 'Травничество: Реки и озёра',
+            herbs_caves: 'Травничество: Пещеры',
+            herbs_omolon: 'Травничество: Омолон',
+
+            // Добыча руды
+            vein_iron_copper: 'Шахтёрство: Железо и медь',
+            vein_gold_silver: 'Шахтёрство: Золото и серебро',
+            vein_ayang_shulay: 'Шахтёрство: Аянг и шулай',
+            vein_nasakh: 'Шахтёрство: Насах',
+        };
+
+        return methodNames[method] || method;
     }
 
     selectItem(key) {
@@ -362,12 +412,25 @@ class VadhidekCrafting {
             const table = this.data.gathering_tables[methodKey];
             if (!table) return '';
 
-            // Находим строку с этим растением
-            const plantRow = table.rows.find(row => row[0] === material.name);
-            if (!plantRow) return '';
-
-            // Используем short_headers если есть, иначе headers
             const headers = table.short_headers || table.headers;
+            let rows = [];
+
+            // 1. Таблицы с поиском строки по имени материала (первая колонка)
+            const singleRowTables = ['smelting', 'herbs_plains', 'herbs_swamp', 'herbs_forest',
+                                      'herbs_mountains', 'herbs_rivers', 'herbs_caves', 'herbs_omolon'];
+
+            if (singleRowTables.includes(methodKey)) {
+                const foundRow = table.rows.find(row => row[0] === material.name);
+                if (foundRow) {
+                    rows = [foundRow];
+                }
+            }
+            // 2. Таблицы, где показываем ВСЕ строки (справочники)
+            else if (['butchering', 'hiyal_bones'].includes(methodKey) || methodKey.startsWith('vein_')) {
+                rows = table.rows;
+            }
+
+            if (rows.length === 0) return '';
 
             return `
                 <div class="vadhidek-gathering-table">
@@ -377,12 +440,18 @@ class VadhidekCrafting {
                             <tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr>
                         </thead>
                         <tbody>
-                            <tr>${plantRow.map(c => `<td>${c}</td>`).join('')}</tr>
+                            ${rows.map(row => `<tr>${row.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}
                         </tbody>
                     </table>
                 </div>
             `;
         }).filter(html => html !== '').join('');
+    }
+
+    getSmeltingMaterialName(fullName) {
+        // "Единица меди" -> "медь", "Единица железа" -> "железо"
+        const parts = fullName.toLowerCase().split(' ');
+        return parts[parts.length - 1] || fullName;
     }
 
     addToInventory(key, qty = 1) {
