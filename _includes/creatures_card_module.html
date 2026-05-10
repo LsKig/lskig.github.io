@@ -1,6 +1,7 @@
 {% comment %}
   creatures_card_module.html
   Использование: {% include creatures_card_module.html creature_key="ghoul" layout="right" %}
+  layout: left, right, top
 {% endcomment %}
 
 {% assign creature = site.data.creatures.creatures[include.creature_key] %}
@@ -12,44 +13,136 @@
      data-creature-module
      data-creature-key="{{ include.creature_key }}">
 
-  <!-- Карточка существа -->
   <div class="creature-card-container">
     <article class="creature-card"
              data-creature="{{ include.creature_key }}"
              aria-label="Карточка существа: {{ creature.name }}">
 
+      {% if creature.image %}
       <div class="card-image">
-        {% if creature.image %}
-          <img src="{{ image_url }}{{ creature.image }}" alt="{{ creature.name }}" loading="lazy">
-        {% else %}
-          <div class="image-placeholder">Изображение отсутствует</div>
+        <img src="{{ image_url }}{{ creature.image }}" alt="{{ creature.name }}" loading="lazy">
+        {% if creature.cr or creature.danger %}
+          <span class="card-badge">CR {{ creature.cr | default: creature.danger }}</span>
         {% endif %}
-        {% if creature.cr %}<span class="card-badge">CR {{ creature.cr }}</span>{% endif %}
       </div>
+      {% endif %}
 
       <div class="card-content">
         <h3 class="card-title">{{ creature.name }}</h3>
+        {% if creature.type %}
+        <p class="card-type">{{ creature.type }}</p>
+        {% endif %}
         <p class="card-description">{{ creature.description }}</p>
       </div>
 
       {% if creature.stats %}
       <div class="card-stats">
-        {% for stat_key in creature.stats %}
-          {% unless stat_key == "attacks" %}
-          <div class="stat-row">
-            <span class="stat-label">{{ stat_key | capitalize }}:</span>
-            <span class="stat-value">{{ creature.stats[stat_key] }}</span>
+        {% if creature.stats.hp or creature.stats.armor or creature.stats.speed %}
+        <div class="stat-group basic-stats">
+          {% if creature.stats.hp %}
+          <div class="stat-row full-width">
+            <span class="stat-label">Хиты:</span>
+            <span class="stat-value">{{ creature.stats.hp }}</span>
           </div>
-          {% endunless %}
+          {% endif %}
+          {% if creature.stats.armor %}
+          <div class="stat-row full-width">
+            <span class="stat-label">Класс Доспеха:</span>
+            <span class="stat-value">{{ creature.stats.armor }}</span>
+          </div>
+          {% endif %}
+          {% if creature.stats.speed %}
+          <div class="stat-row full-width">
+            <span class="stat-label">Скорость:</span>
+            <span class="stat-value">{{ creature.stats.speed }}</span>
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {% assign has_abilities = false %}
+        {% for ability in "STR,AGI,CON,INT,WIS,CHA" | split: "," %}
+          {% if creature.stats[ability] %}{% assign has_abilities = true %}{% break %}{% endif %}
         {% endfor %}
-        {% if creature.stats.attacks %}
-        <div class="attacks-list">
-          {% for attack in creature.stats.attacks %}
-          <div class="attack-item">
-            <span class="attack-name">{{ attack.name }}</span>
-            <span class="attack-damage">{{ attack.damage }}</span>
-          </div>
+
+        {% if has_abilities %}
+        <div class="stat-group ability-scores">
+          {% for ability in "STR,AGI,CON,INT,WIS,CHA" | split: "," %}
+            {% if creature.stats[ability] %}
+            <div class="ability-score">
+              <span class="ability-key">{{ ability }}</span>
+              <span class="ability-value">{{ creature.stats[ability] }}</span>
+            </div>
+            {% endif %}
           {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if creature.stats.saves %}
+        <div class="stat-row full-width">
+          <span class="stat-label">Спасброски:</span>
+          <span class="stat-value">{{ creature.stats.saves }}</span>
+        </div>
+        {% endif %}
+
+        {% if creature.stats.skills %}
+        <div class="stat-row full-width">
+          <span class="stat-label">Навыки:</span>
+          <span class="stat-value">{{ creature.stats.skills }}</span>
+        </div>
+        {% endif %}
+
+        {% if creature.stats.dmg_res or creature.stats.dmg_imn or creature.stats.con_imn or creature.stats.dmg_vul %}
+        <div class="stat-group defense-stats">
+          {% if creature.stats.dmg_res %}
+          <div class="stat-row full-width">
+            <span class="stat-label">Сопротивление к урону:</span>
+            <span class="stat-value">{{ creature.stats.dmg_res }}</span>
+          </div>
+          {% endif %}
+          {% if creature.stats.dmg_imn %}
+          <div class="stat-row full-width">
+            <span class="stat-label">Иммунитет к урону:</span>
+            <span class="stat-value">{{ creature.stats.dmg_imn }}</span>
+          </div>
+          {% endif %}
+          {% if creature.stats.con_imn %}
+          <div class="stat-row full-width">
+            <span class="stat-label">Иммунитет к состоянию:</span>
+            <span class="stat-value">{{ creature.stats.con_imn }}</span>
+          </div>
+          {% endif %}
+          {% if creature.stats.dmg_vul %}
+          <div class="stat-row full-width">
+            <span class="stat-label">Уязвимость к урону:</span>
+            <span class="stat-value">{{ creature.stats.dmg_vul }}</span>
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {% if creature.stats.sens %}
+        <div class="stat-row full-width">
+          <span class="stat-label">Чувства:</span>
+          <span class="stat-value">{{ creature.stats.sens }}</span>
+        </div>
+        {% endif %}
+        {% if creature.stats.languages %}
+        <div class="stat-row full-width">
+          <span class="stat-label">Языки:</span>
+          <span class="stat-value">{{ creature.stats.languages }}</span>
+        </div>
+        {% endif %}
+        {% if creature.stats.danger %}
+        <div class="stat-row full-width">
+          <span class="stat-label">Опасность:</span>
+          <span class="stat-value">{{ creature.stats.danger }}</span>
+        </div>
+        {% endif %}
+        {% if creature.stats.mastery %}
+        <div class="stat-row full-width">
+          <span class="stat-label">Бонус мастерства:</span>
+          <span class="stat-value">{{ creature.stats.mastery }}</span>
         </div>
         {% endif %}
       </div>
@@ -61,11 +154,9 @@
     </article>
   </div>
 
-  <!-- Контейнер для текста (заполняется JS из контента после include) -->
   <div class="creature-text-content"></div>
 </div>
 
-<!-- Подключаем данные один раз на страницу -->
 {% unless page.creatures_data_loaded %}
 <script>
   window.creaturesData = {{ site.data.creatures | jsonify }};
