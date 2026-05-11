@@ -2,7 +2,7 @@
 title: ЗБЛ(Молчание Богов) - Крафт 
 layout: default
 nav_order: 2
-parent: Генераторы
+parent: Земли Былых Легенд(Молчание богов)
 ---
 
 # {{page.title}}
