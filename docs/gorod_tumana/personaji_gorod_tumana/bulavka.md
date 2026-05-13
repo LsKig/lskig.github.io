@@ -7,7 +7,7 @@ parent: Персонажи(Город Тумана)
 
 # {{ page.title }}
 
-{% include creatures_card_module.html creature_key="drakon" layout="right" %}
+{% include creatures_card_module.html creature_key="bulavka" layout="right" %}
 
 **Внешность:** 
 
