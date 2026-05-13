@@ -1321,3 +1321,80 @@ creatures:
       languages: "—"
       danger: "13 (10000 опыта)"
       mastery: "+5"
+
+  barbi:
+    name: "Барби"
+    type: "Воспитанница интерната"
+    image: "barbi.png"
+    description: "Одна из Лишних"
+    stats:
+      skills: "Очаровательная магия"
+  kislij:
+    name: "Кислый"
+    type: "Воспитанник интерната"
+    image: "kislij.png"
+    description: "Один из Лишних"
+    stats:
+      skills: "Ядовитый пот"
+  kvazimodo:
+    name: "Квазимодо"
+    type: "Воспитанница интерната"
+    description: "Одна из Лишних"
+    stats:
+      skills: "Знание проходов"
+  scalpelj:
+    name: "Скальпель"
+    type: "Воспитанник интерната"
+    description: "Один из Лишних"
+    stats:
+      skills: "???"
+  roza:
+    name: "Роза"
+    type: "Воспитанница интерната"
+    description: "Лидер группы Колдуны"
+    stats:
+      skills: "???"
+  pugalo:
+    name: "Пугало"
+    type: "Воспитанница интерната"
+    description: "Одна из колдунов."
+    stats:
+      skills: "???"
+  drakon:
+    name: "Дракон"
+    type: "Воспитанник интерната"
+    image: "drakon.png"
+    description: "Лидер группы Мертвецы."
+    stats:
+      skills: "???"
+  svistok:
+    name: "Свисток"
+    type: "Воспитанник интерната"
+    description: "Один из Мертвецов"
+    stats:
+      skills: "???"
+  klyaksa:
+    name: "Клякса"
+    type: "Воспитанник интерната"
+    description: "Один из Лишних"
+    stats:
+      skills: "???"
+  shoker:
+    name: "Клякса"
+    type: "Воспитанник интерната"
+    description: "Один из Лишних"
+    stats:
+      skills: "Электростатическая бомба"
+  zubr:
+    name: "Зубр"
+    type: "Воспитанник интерната"
+    description: "Лидер группы Куклы."
+    stats:
+      skills: "???"
+  bulavka:
+    name: "Булавка"
+    type: "Воспитанница интерната"
+    description: "Одна из Мертвецов. Девушка Дракона"
+    stats:
+      skills: "???"
+
