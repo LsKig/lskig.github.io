@@ -1347,7 +1347,7 @@ creatures:
     type: "Воспитанник интерната"
     description: "Один из Лишних"
     stats:
-      skills: "???"
+      skills: "Внушающий страх"
   roza:
     name: "Роза"
     type: "Воспитанница интерната"
@@ -1366,19 +1366,19 @@ creatures:
     image: "drakon.png"
     description: "Лидер группы Мертвецы."
     stats:
-      skills: "???"
+      skills: "Превращение в дракона"
   svistok:
     name: "Свисток"
     type: "Воспитанник интерната"
     description: "Один из Мертвецов"
     stats:
-      skills: "???"
+      skills: "Оглушительный свист"
   klyaksa:
     name: "Клякса"
     type: "Воспитанник интерната"
     description: "Один из Лишних"
     stats:
-      skills: "???"
+      skills: "Ожившие рисунки"
   shoker:
     name: "Клякса"
     type: "Воспитанник интерната"
@@ -1396,5 +1396,5 @@ creatures:
     type: "Воспитанница интерната"
     description: "Одна из Мертвецов. Девушка Дракона"
     stats:
-      skills: "???"
+      skills: "Только правда"
 
