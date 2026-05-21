@@ -5,7 +5,7 @@ nav_order: 3
 parent: Бестиарий ЗБЛ
 ---
 
-# {{ page.title }}
+# Рхайа
 
 {% include creatures_card_module.html creature_key="rkhaya" layout="right" %}
 

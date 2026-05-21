@@ -5,7 +5,7 @@ nav_order: 3
 parent: Бестиарий ЗБЛ
 ---
 
-# {{ page.title }}
+# Беглец — Один Хищник на свободе
 
 {% include creatures_card_module.html creature_key="beglets_one" layout="right" %}
 

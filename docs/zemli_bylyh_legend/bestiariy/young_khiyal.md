@@ -5,7 +5,7 @@ nav_order: 3
 parent: Бестиарий ЗБЛ
 ---
 
-# {{ page.title }}
+# Молодой Хиял
 
 {% include creatures_card_module.html creature_key="young_khiyal" layout="right" %}
 

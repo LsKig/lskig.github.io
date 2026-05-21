@@ -5,7 +5,7 @@ nav_order: 3
 parent: Бестиарий ЗБЛ
 ---
 
-# {{ page.title }}
+# Подчинённый туслах
 
 {% include creatures_card_module.html creature_key="podchinennyi_tuslakh" layout="right" %}
 

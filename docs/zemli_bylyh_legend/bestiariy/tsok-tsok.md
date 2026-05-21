@@ -5,7 +5,7 @@ nav_order: 3
 parent: Бестиарий ЗБЛ
 ---
 
-# {{ page.title }}
+# Цок-цо
 
 {% include creatures_card_module.html creature_key="tsok_tsok" layout="right" %}
 

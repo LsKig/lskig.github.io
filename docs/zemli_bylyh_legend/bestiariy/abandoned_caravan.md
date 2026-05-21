@@ -5,7 +5,7 @@ nav_order: 3
 parent: Бестиарий ЗБЛ
 ---
 
-# {{ page.title }}
+# Оставленный караван
 
 {% include creatures_card_module.html creature_key="abandoned_caravan" layout="right" %}
 

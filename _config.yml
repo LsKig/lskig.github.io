@@ -16,7 +16,9 @@ sass:
     - import
 
 lsi: false
-safe: true
+safe: false
+plugins:
+  - jekyll-feed
 incremental: false
 highlighter: rouge
 gist:

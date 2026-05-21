@@ -5,7 +5,7 @@ nav_order: 3
 parent: Бестиарий ЗБЛ
 ---
 
-# {{ page.title }}
+# Беглец — семь Хищников на свободе
 
 {% include creatures_card_module.html creature_key="beglets_seven" layout="right" %}
 

@@ -5,7 +5,7 @@ nav_order: 3
 parent: Бестиарий ЗБЛ
 ---
 
-# {{ page.title }}
+# Морь
 
 {% include creatures_card_module.html creature_key="morj" layout="right" %}
 

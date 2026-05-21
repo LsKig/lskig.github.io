@@ -5,7 +5,7 @@ nav_order: 3
 parent: Бестиарий ЗБЛ
 ---
 
-# {{ page.title }}
+# Муора-бере
 
 {% include creatures_card_module.html creature_key="muora_bere" layout="right" %}
 
