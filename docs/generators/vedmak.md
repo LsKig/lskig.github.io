@@ -65,7 +65,7 @@ parent: Генераторы
 </div>
 
 
-### Гномы
+### Низушки
 
 <div class="dice-generator" data-table="vedmak_gnome_male_names">
   <p> Мужчина:</p>
