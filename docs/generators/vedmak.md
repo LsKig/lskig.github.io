@@ -18,7 +18,6 @@ parent: Генераторы
   <button class="roll-button">⚅</button>
 </div>
 
-
 <div class="dice-generator" data-table="vedmak_man_name_aedirn">
   <p> Аедирн:</p>
   <div class="result">
@@ -26,7 +25,6 @@ parent: Генераторы
   </div>
   <button class="roll-button">⚅</button>
 </div>
-
 
 <div class="dice-generator" data-table="vedmak_man_name_cidarian">
   <p> Цидарис:</p>
@@ -36,6 +34,13 @@ parent: Генераторы
   <button class="roll-button">⚅</button>
 </div>
 
+<div class="dice-generator" data-table="vedmak_man_name_kovir">
+  <p> Ковир:</p>
+  <div class="result">
+    <div class="dice-result">-</div>
+  </div>
+  <button class="roll-button">⚅</button>
+</div>
 
 ### Женские
 
@@ -55,7 +60,6 @@ parent: Генераторы
   <button class="roll-button">⚅</button>
 </div>
 
-
 <div class="dice-generator" data-table="vedmak_wooman_name_cidarian">
   <p> Цидарис:</p>
   <div class="result">
@@ -64,6 +68,13 @@ parent: Генераторы
   <button class="roll-button">⚅</button>
 </div>
 
+<div class="dice-generator" data-table="vedmak_wooman_name_kovir">
+  <p> Ковир:</p>
+  <div class="result">
+    <div class="dice-result">-</div>
+  </div>
+  <button class="roll-button">⚅</button>
+</div>
 
 ### Низушки
 
@@ -82,8 +93,6 @@ parent: Генераторы
   </div>
   <button class="roll-button">⚅</button>
 </div>
-
-
 
 ### Эльфы
 
@@ -114,6 +123,16 @@ parent: Генераторы
 </div>
 
 <div class="dice-generator" data-table="vedmak_dwarf_female_names">
+  <p> Женщина:</p>
+  <div class="result">
+    <div class="dice-result">-</div>
+  </div>
+  <button class="roll-button">⚅</button>
+</div>
+
+### Дриады
+
+<div class="dice-generator" data-table="vedmak_driad_name">
   <p> Женщина:</p>
   <div class="result">
     <div class="dice-result">-</div>
