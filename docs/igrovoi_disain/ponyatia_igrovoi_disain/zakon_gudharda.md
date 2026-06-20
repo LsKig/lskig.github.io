@@ -2,8 +2,7 @@
 title: Закон Гудхарда
 layout: default
 nav_order: 4
-description: Свойства человеческой психики
-parent: Персонажи
+parent: Понятия - Игровой Дизайн
 ---
 
 # {{page.title}}
