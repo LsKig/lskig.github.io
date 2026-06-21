@@ -75,13 +75,11 @@ class AlchemyCraft {
     }
 
     getImageUrl(imageName) {
-        // Используем base URL из data-атрибута или относительный путь по умолчанию
         const baseUrl = this.container.dataset.imagesBaseUrl || '/assets/images/';
         return `${baseUrl}${imageName}`;
     }
 
     attachEventListeners() {
-        // Обработчики для слотов
         this.slotsContainer.addEventListener('click', (e) => {
             const slot = e.target.closest('.slot');
             if (slot) {
@@ -93,7 +91,6 @@ class AlchemyCraft {
         this.slotsContainer.addEventListener('dragover', (e) => this.handleDragOver(e));
         this.slotsContainer.addEventListener('drop', (e) => this.handleDrop(e));
 
-        // Обработчики для палитры символов
         this.symbolsPalette.addEventListener('dragstart', (e) => this.handleDragStart(e));
         this.symbolsPalette.addEventListener('click', (e) => {
             const symbolOption = e.target.closest('.symbol-option');
@@ -103,11 +100,9 @@ class AlchemyCraft {
             }
         });
 
-        // Обработчики для кнопок
         this.checkBtn.addEventListener('click', () => this.checkRecipes());
         this.clearBtn.addEventListener('click', () => this.clearAllSlots());
 
-        // Обработчики клавиатуры
         document.addEventListener('keydown', (e) => this.handleKeyPress(e));
     }
 
@@ -135,17 +130,14 @@ class AlchemyCraft {
     }
 
     handleKeyPress(e) {
-        // Очистка по Escape
         if (e.key === 'Escape') {
             this.clearAllSlots();
         }
 
-        // Проверка рецептов по Enter
         if (e.key === 'Enter' && !this.checkBtn.disabled) {
             this.checkRecipes();
         }
 
-        // Быстрые клавиши для символов (1-9)
         if (e.key >= '1' && e.key <= '9') {
             const symbolCodes = Object.keys(this.data.symbols || {});
             const index = parseInt(e.key) - 1;
@@ -217,7 +209,7 @@ class AlchemyCraft {
 
         this.currentSelection.style.display = 'block';
         this.currentSelection.innerHTML = `
-            <strong>Текущий выбор:</strong>
+            <strong>Текущий выбор: </strong>
             <div class="selection-symbols">
                 ${usedSymbols.map(code => {
                     const symbol = this.data.symbols[code];
@@ -261,7 +253,7 @@ class AlchemyCraft {
         this.resultsContainer.scrollIntoView();
     }
 
-   findAvailableRecipes(inputSymbols) {
+    findAvailableRecipes(inputSymbols) {
         const availableRecipes = [];
 
         if (!this.data.potions) return availableRecipes;
@@ -271,7 +263,6 @@ class AlchemyCraft {
             const availableSymbols = [...inputSymbols];
             const missingSymbols = [];
 
-            // Проверяем каждый символ в рецепте
             for (const symbol of requiredSymbols) {
                 const index = availableSymbols.indexOf(symbol);
                 if (index > -1) {
@@ -281,10 +272,9 @@ class AlchemyCraft {
                 }
             }
 
-            // Показываем рецепт если есть хотя бы один совпадающий символ
-            // ИЛИ если есть все символы (missingSymbols.length === 0)
             const matchedSymbols = requiredSymbols.length - missingSymbols.length;
-            const valuebleReceipt = missingSymbols.length <=  Math.ceil(requiredSymbols.length / 2);
+            const valuebleReceipt = missingSymbols.length <= Math.ceil(requiredSymbols.length / 2);
+
             if (matchedSymbols > 0 && valuebleReceipt) {
                 availableRecipes.push({
                     ...potionData,
@@ -297,7 +287,6 @@ class AlchemyCraft {
             }
         });
 
-        // Сортируем рецепты: сначала те, которые можно создать, затем по количеству совпадающих символов
         return availableRecipes.sort((a, b) => {
             if (a.canCreate && !b.canCreate) return -1;
             if (!a.canCreate && b.canCreate) return 1;
@@ -313,6 +302,40 @@ class AlchemyCraft {
         `;
     }
 
+    parseIngredient(ingredient) {
+        const rarityColors = {
+            'П': 'rarity-common',
+            'О': 'rarity-uncommon',
+            'Р': 'rarity-rare',
+            'У': 'rarity-unique'
+        };
+
+        // Парсим строку вида: "Плод Балисы(О)" или "Плод Балисы(О) - Поля"
+        const match = ingredient.match(/^(.+?)\(([ПОРУ])\)(?:\s*-\s*(.+))?$/);
+
+        if (match) {
+            const name = match[1].trim();
+            const rarity = match[2];
+            const location = match[3] ? match[3].trim() : '';
+            const colorClass = rarityColors[rarity] || '';
+
+            return {
+                name,
+                rarity,
+                location,
+                colorClass
+            };
+        }
+
+        // Если нет редкости в скобках, показываем как есть
+        return {
+            name: ingredient,
+            rarity: '',
+            location: '',
+            colorClass: ''
+        };
+    }
+
     displayPotionRecipe(recipe) {
         const potionDiv = document.createElement('div');
         potionDiv.className = `potion-recipe ${recipe.canCreate ? 'potion-complete' : ''}`;
@@ -326,9 +349,10 @@ class AlchemyCraft {
                 </div>
             `;
         } else {
+            // Показываем ВСЕ недостающие символы (с дубликатами)
             statusHtml = `
                 <div class="potion-status missing">
-                    <strong>Можно создать - нужно:</strong>
+                    <strong>Можно создать - нужно: </strong>
                     ${recipe.missingSymbols.map(code => {
                         const symbol = this.data.symbols[code];
                         return symbol ? symbol.name : code;
@@ -342,6 +366,7 @@ class AlchemyCraft {
             `;
         }
 
+        // Парсим и отображаем требуемые символы
         const requiredSymbolsHtml = recipe.symbols.map(symbolCode => {
             const symbol = this.data.symbols[symbolCode];
             if (!symbol) return '';
@@ -349,10 +374,48 @@ class AlchemyCraft {
             return `
                 <div class="symbol-header">
                     <img src="${this.getImageUrl(symbol.image)}" alt="${symbol.name}">
-                    <strong>${symbol.name}:</strong>
+                    <strong>${symbol.name}</strong>
                 </div>
             `;
         }).join('');
+
+        // Парсим и отображаем ингредиенты недостающих символов в виде таблицы
+        // Показываем таблицу только для уникальных символов (без дубликатов)
+        let ingredientsTableHtml = '';
+        if (recipe.missingSymbols.length > 0) {
+            const uniqueMissingSymbols = [...new Set(recipe.missingSymbols)];
+
+            ingredientsTableHtml = `<div class="ingredients-table-container">`;
+
+            uniqueMissingSymbols.forEach(symbolCode => {
+                const symbol = this.data.symbols[symbolCode];
+                if (symbol && symbol.ingredients) {
+                    ingredientsTableHtml += `
+                        <div class="symbol-ingredients">
+                            <div class="symbol-header">
+                                <img src="${this.getImageUrl(symbol.image)}" alt="${symbol.name}">
+                                <strong>${symbol.name}</strong>
+                            </div>
+                            <table class="ingredients-table">
+                                <tbody>
+                                    ${symbol.ingredients.map(ing => {
+                                        const parsed = this.parseIngredient(ing);
+                                        return `
+                                            <tr class="${parsed.colorClass}">
+                                                <td>${parsed.name}</td>
+                                                ${parsed.location ? `<td>${parsed.location}</td>` : ''}
+                                            </tr>
+                                        `;
+                                    }).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+                    `;
+                }
+            });
+
+            ingredientsTableHtml += `</div>`;
+        }
 
         let html = `
             <h3>${recipe.name}</h3>
@@ -361,38 +424,13 @@ class AlchemyCraft {
             </div>
             <p class="potion-description">${recipe.description}</p>
             ${statusHtml}
+            ${ingredientsTableHtml}
         `;
-
-        // Показываем ингредиенты для недостающих символов, если они есть
-        if (recipe.missingSymbols.length > 0) {
-            html += `<div class="ingredients-list">`;
-
-            recipe.missingSymbols.forEach(symbolCode => {
-                const symbol = this.data.symbols[symbolCode];
-                if (symbol) {
-                    html += `
-                        <div class="symbol-ingredients">
-                            <div class="symbol-header">
-                                <img src="${this.getImageUrl(symbol.image)}" alt="${symbol.name}">
-                                <strong>${symbol.name}</strong>
-                            </div>
-                            <ul>
-                                ${symbol.ingredients.map(ing => `<li>${ing}</li>`).join('')}
-                            </ul>
-                        </div>
-                    `;
-                }
-            });
-
-            html += `</div>`;
-        }
 
         potionDiv.innerHTML = html;
         this.resultsContainer.appendChild(potionDiv);
     }
 
-
-    // Публичные методы для внешнего использования
     setSymbols(symbols) {
         if (symbols.length <= 8) {
             this.selectedSymbols = [...symbols, ...Array(8 - symbols.length).fill(null)];
@@ -405,20 +443,17 @@ class AlchemyCraft {
     }
 
     destroy() {
-        // Очистка event listeners при необходимости
         this.clearAllSlots();
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     const alchemyContainers = document.querySelectorAll('.alchemy-module');
-
     alchemyContainers.forEach(container => {
         new AlchemyCraft(container);
     });
 });
 
-// Экспорт для использования в других модулях
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = AlchemyCraft;
 }
