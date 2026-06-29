@@ -1,7 +1,7 @@
 ---
 title: Синопсис
 layout: default
-nav order: 4
+nav order: 5
 description: Общее описание мира и сюжета
 parent: Феномен воображения
 ---
