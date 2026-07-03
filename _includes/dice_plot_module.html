@@ -1,0 +1,29 @@
+{% assign data_file = include.data_file | default: 'detective_plot' %}
+{% assign module_title = include.title | default: 'Генератор завязки сюжета' %}
+{% assign module_data = site.data[data_file] %}
+
+{% if module_data %}
+<script>
+  window['dicePlotData_{{ data_file }}'] = {{ module_data | jsonify }};
+</script>
+
+<div class="dice-plot-module" data-data-file="{{ data_file }}">
+  <h2 class="module-title">{{ module_title }}</h2>
+
+  <div class="controls-panel">
+    <div class="controls-buttons">
+      <button class="roll-btn">
+        Бросить {{ module_data.config.default_dice_count }}d{{ module_data.config.default_die_type }} (Space)
+      </button>
+      <button class="clear-btn">Очистить (Esc)</button>
+    </div>
+  </div>
+
+  <div class="dice-display"></div>
+  <div class="results-container"></div>
+</div>
+{% else %}
+<div class="dice-plot-module error">
+  <p>Ошибка: файл данных <code>_data/{{ data_file }}.yml</code> не найден.</p>
+</div>
+{% endif %}

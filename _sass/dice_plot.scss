@@ -1,0 +1,207 @@
+$primary-color: $grey-dk-300;
+$accent-color: $grey-dk-200;
+$highlight-color: #ffd700;
+$text-color: $grey-lt-300;
+$danger-color: #ff6b6b;
+
+.dice-plot-module {
+  max-width: 900px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: $primary-color;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  color: $text-color;
+  font-family: $body-font-family;
+
+  &.error {
+    text-align: center;
+    color: $danger-color;
+    border: 2px dashed $danger-color;
+  }
+
+  .module-title {
+    text-align: left;
+    margin-top: 0;
+    font-size: 1.8em;
+    color: $highlight-color;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.4rem;
+  }
+
+  .controls-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+
+    .controls-buttons {
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .roll-btn,
+    .clear-btn {
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: transparent;
+      border: 1.5px solid;
+    }
+
+    .roll-btn {
+      color: $highlight-color;
+      border-color: $highlight-color;
+
+      &:hover {
+        background: $highlight-color;
+        color: $primary-color;
+        transform: translateY(-1px);
+        box-shadow: 0 3px 10px rgba(255, 215, 0, 0.25);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+      }
+    }
+
+    .clear-btn {
+      color: $danger-color;
+      border-color: $danger-color;
+
+      &:hover {
+        background: $danger-color;
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: 0 3px 10px rgba(255, 107, 107, 0.25);
+      }
+    }
+  }
+
+  // Компактный блок с кубиками
+  .dice-display {
+    margin-bottom: 1rem;
+    padding: 0.6rem 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+
+    .dice-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .die {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, #ffffff, #e6e6e6);
+      color: #333;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 0.85rem;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      transition: transform 0.15s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .frequencies-text {
+      font-size: 0.85rem;
+      color: #bbb;
+
+      strong {
+        color: $highlight-color;
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  // Двухколоночная раскладка результатов
+  .results-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+
+    .no-results {
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      color: #aaa;
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+
+    .result-section {
+      flex: 1 1 300px; // Минимальная ширина колонки 300px
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+      border-left: 3px solid $highlight-color;
+      animation: slideInUp 0.3s ease;
+
+      &:first-child:last-child {
+        // Если блок один — он занимает всю ширину
+        flex: 1 1 100%;
+      }
+
+      h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        color: $highlight-color;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        padding-bottom: 0.3rem;
+      }
+
+      .plot-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          padding: 0.3rem 0;
+          color: #ddd;
+          font-size: 0.9rem;
+          line-height: 1.4;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
