@@ -43,7 +43,7 @@ module AutoCrossRef
       RussianEndings::ALL.each do |ending|
         if word.downcase.end_with?(ending)
           candidate = word[0..-ending.length-1]
-          # 🔹 ВАЖНО: проверяем, что основа достаточно длинная
+
           return candidate if candidate && candidate.length >= 3
         end
       end
@@ -68,7 +68,7 @@ module AutoCrossRef
     end
   end
 
-  # 🔹 ШАГ 1: Сбор заголовков
+  # ШАГ 1: Сбор заголовков
   Jekyll::Hooks.register :site, :post_read do |site|
     site.data['_cross_refs'] = {}
     (site.pages + site.documents).each do |page|
@@ -86,13 +86,13 @@ module AutoCrossRef
           slug: slug,
           original: title,
           file: page.path,
-          stem: RussianMorph.canonical_stem(title) # 👈 Для сравнения
+          stem: RussianMorph.canonical_stem(title) # Для сравнения
         }
       end
     end
   end
 
-  # 🔹 ШАГ 2: Внедрение ссылок
+  # ШАГ 2: Внедрение ссылок
   Jekyll::Hooks.register :pages, :pre_render do |page, payload|
     next unless page.path.start_with?("#{TARGET_DIR}/") && page.path.end_with?('.md')
     refs = payload['site'].data['_cross_refs']
@@ -121,7 +121,7 @@ module AutoCrossRef
     full_pattern = %r{(?<![а-яёa-zA-Z0-9_\[])(#{terms_regex})(?![а-яёa-zA-Z0-9_\]])}i
 
     content = content.gsub(full_pattern) do |match|
-      # 🔹 Сравниваем по стемам (работает в обе стороны)
+      # Сравниваем по стемам (работает в обе стороны)
       match_stem = RussianMorph.canonical_stem(match)
       ref = sorted_refs.find { |r| r[:stem] == match_stem }
 
