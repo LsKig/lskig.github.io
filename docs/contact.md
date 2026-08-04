@@ -6,4 +6,5 @@ description: "Контакты"
 permalink: /contacts
 ---
 
-Здесь какие-то контакты.
+![Boosty ](/assets/images/boosty.png)[Boosty](https://boosty.to/gikls)  
+![TG ](/assets/images/telegram.png)[TG](https://t.me/gikls)
