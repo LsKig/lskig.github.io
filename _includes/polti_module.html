@@ -7,6 +7,7 @@
 
     <div class="polti-controls">
         <label class="polti-label" for="poltiCount">Количество карт:</label>
+
         <input
             type="number"
             id="poltiCount"
@@ -15,8 +16,17 @@
             max="100"
             value="3"
         >
+
+        <label class="polti-checkbox-label" for="poltiUnique">
+            <input
+                type="checkbox"
+                id="poltiUnique"
+                class="polti-unique-toggle"
+            >
+            Без повторов
+        </label>
+
         <button class="polti-draw-btn">Сделать расклад</button>
     </div>
-
     <div class="polti-cards"></div>
 </div>

@@ -39,6 +39,23 @@ $card-border: rgba(255, 255, 255, 0.2);
     flex-wrap: wrap;
 }
 
+.polti-checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #ccc;
+    font-size: 0.95rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.polti-unique-toggle {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: $gold-color;
+}
+
 .polti-label {
     font-size: 1rem;
     color: #ccc;

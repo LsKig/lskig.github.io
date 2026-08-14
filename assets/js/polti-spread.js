@@ -2,11 +2,14 @@ class PoltiSpread {
     constructor(container) {
         this.container = container;
 
-        // Данные из глобальной переменной (аналогично алхимии)
         this.data = window.poltiData || {};
         this.situations = this.parseSituations();
 
-        // Текущий расклад: массив объектов-карт
+        // Максимум для режима без повторов.
+        // Если YAML исправлен, ситуаций будет 36.
+        this.uniqueLimit = 36;
+        this.maxWithoutRepeats = Math.min(this.uniqueLimit, this.situations.length);
+
         this.cards = [];
 
         this.init();
@@ -16,6 +19,7 @@ class PoltiSpread {
         this.initializeElements();
         this.attachEventListeners();
         this.validateData();
+        this.updateCountLimit();
     }
 
     /* ============================================================
@@ -71,6 +75,7 @@ class PoltiSpread {
 
     initializeElements() {
         this.countInput = this.container.querySelector('.polti-count-input');
+        this.uniqueCheckbox = this.container.querySelector('.polti-unique-toggle');
         this.drawBtn = this.container.querySelector('.polti-draw-btn');
         this.cardsContainer = this.container.querySelector('.polti-cards');
     }
@@ -78,7 +83,6 @@ class PoltiSpread {
     attachEventListeners() {
         this.drawBtn.addEventListener('click', () => this.drawSpread());
 
-        // Enter в поле количества тоже делает расклад
         this.countInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
                 e.preventDefault();
@@ -86,7 +90,12 @@ class PoltiSpread {
             }
         });
 
-        // Делегирование кликов по картам (переворот)
+        if (this.uniqueCheckbox) {
+            this.uniqueCheckbox.addEventListener('change', () => {
+                this.updateCountLimit();
+            });
+        }
+
         this.cardsContainer.addEventListener('click', (e) => {
             const cardEl = e.target.closest('.polti-card');
             if (cardEl) {
@@ -100,37 +109,100 @@ class PoltiSpread {
        ============================================================ */
 
     getCount() {
+        const max = this.getMaxCount();
+
         let count = parseInt(this.countInput.value);
 
-        if (isNaN(count) || count < 1) count = 1;
-        if (count > 100) count = 100;
+        if (isNaN(count) || count < 1) {
+            count = 1;
+        }
+
+        if (count > max) {
+            count = max;
+        }
 
         return count;
+    }
+    isUniqueMode() {
+    return Boolean(
+        this.uniqueCheckbox &&
+        this.uniqueCheckbox.checked &&
+        this.maxWithoutRepeats > 0
+    );
+}
+
+    getMaxCount() {
+        if (this.isUniqueMode()) {
+            return this.maxWithoutRepeats;
+        }
+
+        return 100;
+    }
+
+    updateCountLimit() {
+        const max = this.getMaxCount();
+
+        this.countInput.max = max;
+
+        let count = parseInt(this.countInput.value);
+
+        if (isNaN(count) || count < 1) {
+            count = 1;
+        }
+
+        if (count > max) {
+            count = max;
+        }
+
+        this.countInput.value = count;
+    }
+
+    shuffleArray(items) {
+        for (let i = items.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [items[i], items[j]] = [items[j], items[i]];
+        }
+
+        return items;
     }
 
     // Полный сброс и выкладка новой группы карт
     drawSpread() {
-        if (this.situations.length === 0) return;
+        if (this.situations.length === 0) {
+            return;
+        }
 
         const count = this.getCount();
-        this.countInput.value = count; // нормализуем отображение
+        this.countInput.value = count;
 
         this.cards = [];
-        for (let i = 0; i < count; i++) {
-            this.cards.push(this.createCardData(i));
+
+        if (this.isUniqueMode()) {
+            const pool = [...this.situations];
+            this.shuffleArray(pool);
+
+            const selectedSituations = pool.slice(0, count);
+
+            selectedSituations.forEach((situation, index) => {
+                this.cards.push(this.createCardData(index, situation));
+            });
+        } else {
+            for (let i = 0; i < count; i++) {
+                this.cards.push(this.createCardData(i));
+            }
         }
 
         this.renderCards();
     }
 
-    createCardData(index) {
-        const situation = this.getRandomSituation();
+    createCardData(index, situation = null) {
+        const chosenSituation = situation || this.getRandomSituation();
 
         return {
             index,
-            situationKey: situation.key,
-            situationName: situation.name,
-            rolls: situation.rolls,
+            situationKey: chosenSituation.key,
+            situationName: chosenSituation.name,
+            rolls: chosenSituation.rolls,
             flipped: false,
             currentRoll: null
         };
