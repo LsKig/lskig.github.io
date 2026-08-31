@@ -10,3 +10,5 @@ parent: Персонажи(Город Тумана)
 {% include creatures_card_module.html creature_key="maira_marin" layout="right" %}
 
 ### Майра Марин(Ма-ма)
+
+Владелеца клуба Гаити. 

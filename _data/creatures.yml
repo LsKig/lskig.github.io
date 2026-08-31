@@ -78,9 +78,12 @@ creatures:
     stats:
       skills: "Знание проходов"
   lolita:
-    name: "Лолита Михайловна"
-    type: ""
+    name: "Лолита Михайловна Ритюнских"
+    type: "Доктор наук по философии"
     image: "lolita.png"
+  maira_marin:
+    name: "Майра Марин"
+    type: "Владелеца Клуба Гаити"
   oleg_sirotkin:
     name: "Олег Сироткин"
     type: "Певец-суперзвезда"
@@ -116,8 +119,8 @@ creatures:
     type: "Автор-исполнитель"
     image: "strogov.png"
   svetlana:
-    name: "Строгов"
-    type: "Автор-исполнитель"
+    name: "Светлана"
+    type: "Учитель биологии, исследователь"
     image: "svetlana.png"
   svistok:
     name: "Свисток"
