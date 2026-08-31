@@ -130,8 +130,9 @@ creatures:
       skills: "Оглушительный свист"
   svyatoslav_bogolyubov:
     name: "Святослав Боголюбов"
-    type: "Автор-исполнитель"
+    type: ""
     image: "svyatoslav_bogolyubov.png"
+    description: "Капитан хоккейной команды"
   vasiliy:
     name: "Василий"
     type: "Работник телестудии"
