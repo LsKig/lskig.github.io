@@ -3,50 +3,57 @@ creatures:
 
   anfisa:
     name: "Анфиса Смышляева"
-    type: "Бизнес-леди из All'Imp "
+    type: "All'Imp"
+    description: "Бизнес-леди из All'Imp"
     image: "anfisa.png"
+  andrei_vasilievich:
+    name: "Андрей Васильевич"
+    description: "Профессор, доктор наук"
+    stats:
+      skills: "Морфей"
   barbi:
     name: "Барби"
-    type: "Воспитанница интерната"
+    type: "Интернат"
     image: "barbi.png"
     description: "Одна из Лишних"
     stats:
       skills: "Очаровательная магия"
   bogatyri:
     name: "Илья, Добрыня, Алеша"
-    type: "Частное охранное предприятие"
+    description: "Частное охранное предприятие"
     image: "bogatyri.png"
   bulavka:
     name: "Булавка"
-    type: "Воспитанница интерната"
+    type: "Интернат"
     description: "Одна из Мертвецов. Девушка Дракона. Говорит только правду."
     stats:
-      skills: "???"
+      skills: "Царевна Лебедь"
   cerber:
     name: "Цербер"
-    type: "Сторож Интерната"
+    type: "Интернат"
     description: "Вечный охранник интерната."
     stats:
       skills: "Мгновенное перемещение"
   denis_vinogradov:
     name: "Денис Виноградов"
-    type: "Бизнес-мен из All'Imp "
+    type: "All'Imp"
+    description: "Бизнес-мен из All'Imp "
     image: "denis_vinogradov.png"
   drakon:
     name: "Дракон"
-    type: "Воспитанник интерната"
+    type: "Интернат"
     image: "drakon.png"
     description: "Лидер группы Мертвецы."
     stats:
       skills: "Превращение в дракона"
   evredika:
     name: "Эвридика"
-    type: "Художница"
+    description: "Художница"
     image: "evredika.png"
 
   fevronia:
     name: "Феврония Нежная"
-    type: ""
+    description: ""
     image: "fevronia.png"
 
   ivan_carev:
@@ -55,106 +62,122 @@ creatures:
     image: "ivan_carev.png"
   kislij:
     name: "Кислый"
-    type: "Воспитанник интерната"
+    type: "Интернат"
     image: "kislij.png"
     description: "Один из Лишних"
     stats:
       skills: "Ядовитый пот"
   klyaksa:
     name: "Клякса"
-    type: "Воспитанник интерната"
+    type: "Интернат"
     description: "Один из Лишних"
     stats:
       skills: "Ожившие рисунки"
   konstantin_buyanovich:
     name: "Константин Буянович Бесммертный"
-    type: "Авторитет из 90-ых"
+    description: "Авторитет из 90-ых"
     image: "konstantin_buyanovich.png"
   kvazimodo:
     name: "Квазимодо"
-    type: "Воспитанница интерната"
+    type: "Интернат"
     description: "Одна из Лишних"
     image: "kvazimodo.png"
     stats:
       skills: "Знание проходов"
   lolita:
-    name: "Лолита Михайловна Ритюнских"
-    type: "Доктор наук по философии"
+    name: "Лолита Михайловна Ретюнских"
+    description: "Доктор наук по философии"
     image: "lolita.png"
   maira_marin:
     name: "Майра Марин"
-    type: "Владелеца Клуба Гаити"
+    description: "Владелеца Клуба Гаити"
+  maria_makarova:
+    name: "Мария Макарова"
+    description: "Тренер по Фехтованию"
   oleg_sirotkin:
     name: "Олег Сироткин"
-    type: "Певец-суперзвезда"
+    description: "Певец-суперзвезда"
     image: "oleg_sirotkin.png"
+
+  otec_ioan:
+    name: "Отец Иоан"
+    description: "Священник, владелец купален."
+    stats:
+      skills: "Иван Купала"
   pugalo:
     name: "Пугало"
-    type: "Воспитанница интерната"
+    type: "Интернат"
     description: "Одна из колдунов."
     stats:
       skills: "???"
   roza:
     name: "Роза"
-    type: "Воспитанница интерната"
+    type: "Интернат"
     description: "Лидер группы Колдуны"
     stats:
       skills: "???"
 
   scalpel:
     name: "Скальпель"
-    type: "Воспитанник интерната"
+    type: "Интернат"
     description: "Один из Лишних"
     image: "scalpel.png"
     stats:
       skills: "Внушающий страх"
   shoker:
     name: "Клякса"
-    type: "Воспитанник интерната"
+    type: "Интернат"
     description: "Один из Лишних"
     stats:
       skills: "Электростатическая бомба"
   strogov:
     name: "Строгов"
-    type: "Автор-исполнитель"
+    description: "Автор-исполнитель"
     image: "strogov.png"
   svetlana:
     name: "Светлана"
-    type: "Учитель биологии, исследователь"
+    description: "Учитель биологии, исследователь"
     image: "svetlana.png"
   svistok:
     name: "Свисток"
-    type: "Воспитанник интерната"
+    type: "Интернат"
     description: "Один из Мертвецов"
     stats:
       skills: "Оглушительный свист"
   svyatoslav_bogolyubov:
     name: "Святослав Боголюбов"
-    type: ""
+    description: ""
     image: "svyatoslav_bogolyubov.png"
     description: "Капитан хоккейной команды"
   vasiliy:
     name: "Василий"
-    type: "Работник телестудии"
+    description: "Работник телестудии"
     image: "vasiliy.png"
   veronika:
     name: "Вероника"
-    type: "Бармэн в Гаити"
+    type: "Гаити"
+    description: "Бармэн в Гаити"
     image: "veronika.png"
   vlad_morozov:
     name: "Влад Морозов"
-    type: ""
+    description: ""
     image: "vlad_morozov.png"
+  yaroslava_romanchik:
+    name: "Ярослава Романчик"
+    description: "Студентка. Художница"
+    stats:
+      skills: "Одноглазое Лихо"
   zinoviy_gromov:
     name: "Зиновий Громов"
-    type: "Директор All'imp"
+    type: "All'Imp"
+    description: "Гендиректор All'imp"
     image: "zinoviy_gromov.png"
   zubr:
     name: "Зубр"
-    type: "Воспитанник интерната"
+    type: "Интернат"
     description: "Лидер группы Куклы."
     stats:
-      skills: "???"
+      skills: "Туман"
 
 
 
