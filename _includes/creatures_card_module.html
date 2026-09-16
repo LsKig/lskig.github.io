@@ -120,7 +120,12 @@
           {% endif %}
         </div>
         {% endif %}
-
+        {% if creature.stats.myth %}
+        <div class="stat-row full-width">
+          <span class="stat-label">Мифос:</span>
+          <span class="stat-value">{{ creature.stats.myth }}</span>
+        </div>
+        {% endif %}
         {% if creature.stats.sens %}
         <div class="stat-row full-width">
           <span class="stat-label">Чувства:</span>

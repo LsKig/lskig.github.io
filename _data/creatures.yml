@@ -1,183 +1,497 @@
-# _data/creatures.yml
 creatures:
-
+  #A
+  aleksey_volchinskiy:
+    name: "Алексей Волчинский"
+    image: "aleksey_volchinskiy.png"
+    description: "Гонщик"
+    stats:
+      myth: "Время"
+  aleksandra_strelnikova:
+    name: "Александра Стрельникова"
+    type: "All Imp."
+    description: "Член совета директоров"
+    stats:
+      myth: "Артемида"
+  alisa_sokolova:
+    name: "Алиса Соколова"
+    description: "Хакер в «Owl Search»"
+    stats:
+      myth: "Лисса"
   anfisa:
     name: "Анфиса Смышляева"
-    type: "All'Imp"
-    description: "Бизнес-леди из All'Imp"
+    type: "All Imp."
+    description: "Член совета директоров"
     image: "anfisa.png"
+  andrei_cherepanov:
+    name: "Андрей Черепанов"
+    type: "All Imp."
+    description: "Учредитель реабилитационного центра «Элизиум»"
+    stats:
+      myth: "Аид"
   andrei_vasilievich:
     name: "Андрей Васильевич"
     description: "Профессор, доктор наук"
     stats:
-      skills: "Морфей"
+      myth: "Морфей"
+  anita_retunskih:
+    name: "Анита Ретюнских"
+    description: "Сестра-сплетница, сельская интеллигенция."
+    stats:
+      myth: "Мойра"
+  arina_sluchainaya:
+    name: "Арина Случайная"
+    image: "arina_sluchainaya.png"
+    description: "Доцент кафедры Математического анализа."
+    stats:
+      myth: "Удача"
+  artemiy_myasnikov:
+    name: "Артемий Мясников"
+    type: "All Imp."
+    description: "Член совета директоров"
+    stats:
+      myth: "Арес"
+
+  #B
   barbi:
-    name: "Барби"
+    name: "«Барби» Кира"
     type: "Интернат"
     image: "barbi.png"
     description: "Одна из Лишних"
     stats:
-      skills: "Очаровательная магия"
+      myth: "Цирцея"
   bogatyri:
     name: "Илья, Добрыня, Алеша"
     description: "Частное охранное предприятие"
     image: "bogatyri.png"
+  boris_rasputin:
+    name: "Борис Распутин"
+    image: "boris_rasputin.png"
+    description: "Бизнесмен, владелец сети крупнейших ликеро-водочных заводов."
+    stats:
+      myth: "Барон Суббота"
+  brandt_ejnansson:
+    name: "Брандт Эйнарссон"
+    description: "Эколог, сын Одрика."
+    stats:
+      myth: "Бальдр"
   bulavka:
     name: "Булавка"
     type: "Интернат"
-    description: "Одна из Мертвецов. Девушка Дракона. Говорит только правду."
+    description: "Одна из Мертвецов."
     stats:
-      skills: "Царевна Лебедь"
+      myth: "Царевна Лебедь"
+
+  #C
   cerber:
     name: "Цербер"
     type: "Интернат"
     description: "Вечный охранник интерната."
     stats:
-      skills: "Мгновенное перемещение"
+      myth: "Гарм"
+
+  #D
+  daniil_gavrilov:
+    name: "Даниил Гаврилов"
+    description: "Сотрудник страхового агентства"
+    stats:
+      myth: "Злой рок"
+  david_gutnik:
+    name: "Давид ибн Гассан Гутник"
+    description: "Владелец магазина «1000 и 1 мелочь»."
+    stats:
+      myth: "Джинн"
   denis_vinogradov:
     name: "Денис Виноградов"
-    type: "All'Imp"
-    description: "Бизнес-мен из All'Imp "
+    type: "All Imp."
+    description: "Бизнес-мен из All Imp."
     image: "denis_vinogradov.png"
+  diana_tsvetaeva:
+    name: "Диана Цветаева"
+    type: "All Imp."
+    description: "Член совета директоров"
+    stats:
+      myth: "Деметра"
+  dmitriy_solopov:
+    name: "Дмитрий Солопов"
+    description: "Лейтенант полиции"
   drakon:
     name: "Дракон"
     type: "Интернат"
     image: "drakon.png"
     description: "Лидер группы Мертвецы."
     stats:
-      skills: "Превращение в дракона"
+      myth: "Змей-горыныч"
+  dylda:
+    name: "«Дылда»"
+    description: "Семиклассница, высокая спортсменка."
+    stats:
+      myth: "Скади"
+
+  #E
+  egor_sladkov:
+    name: "Егор Сладков"
+    description: "Охранник на хлебозаводе Коломенском"
+    stats:
+      myth: "Гензель"
+  elena_kotova:
+    name: "Елена Котова (Кукушкина)"
+    description: "Супруга Родиона"
+    stats:
+      myth: "Аука"
+  elena_nekrasova:
+    name: "Елена Анатольевна Некрасова"
+    description: "Директор Бюро Контроля"
   evredika:
-    name: "Эвридика"
-    description: "Художница"
+    name: "Евдокия Зеленова"
+    description: "Арт-фотограф, эко-активистка"
     image: "evredika.png"
 
+  #F
   fevronia:
     name: "Феврония Нежная"
-    description: ""
+    description: "Член совета директоров"
+    type: "All Imp."
     image: "fevronia.png"
+    stats:
+      myth: "Афродита"
+  frida_ejnansson:
+    name: "Фрида Эйнарссон (Снегирёва)"
+    description: "Супруга Одрика"
+    stats:
+      myth: "Фригг"
 
+  #G
+  galina_gordeeva:
+    name: "Галина Гордеева"
+    description: "Главный Бухгалтер"
+    type: "All Imp."
+    stats:
+      myth: "Гера"
+  gelasij_beglov:
+    name: "Геласий Беглов"
+    type: "All Imp."
+    description: "Член совета директоров"
+    stats:
+      myth: "Гермес"
+  georgiy_kuznetsov:
+    name: "Георгий Кузнецов"
+    type: "All Imp."
+    description: "Член совета директоров"
+    stats:
+      myth: "Гефест"
+  gestiya_domashneva:
+    name: "Гестия Домашнева"
+    type: "All Imp."
+    description: "HR-директор"
+    stats:
+      myth: "Гестия"
+  glafira_sladkova:
+    name: "Глафира Сладкова"
+    description: "Кассирша в магазине"
+    stats:
+      myth: "Гретель"
+  gleb_norkin:
+    name: "Глеб Норкин"
+    description: "Независимый журналист"
+    stats:
+      myth: "Локи"
+  grigoriy_sichev:
+    name: "Григорий Сычёв"
+    description: "Председатель СНТ"
+    stats:
+      myth: "Гипнос"
+
+  #I
   ivan_carev:
-    name: "Иван Царев"
-    type: "Мэр"
+    name: "Иван Иванович Царёв"
+    description: "Заместитель мэра"
     image: "ivan_carev.png"
+    stats:
+      myth: "Кощей (реликвия)"
+  iuda_strogov:
+    name: "Иуда Родионович Строгов"
+    image: "strogov.png"
+    description: "Рэпер «$trogOff»"
+    stats:
+      myth: "Ананси"
+
+  #K
+  karl_morozov:
+    name: "Карл Форньет-Морозов"
+    description: "Владелец торгового центра «Небо»"
+    stats:
+      myth: "Кари"
+  kharik:
+    name: "Харик"
+    description: "Водитель маршрутки"
+    stats:
+      myth: "Харон"
   kislij:
-    name: "Кислый"
+    name: "«Кислый» Тимур"
     type: "Интернат"
     image: "kislij.png"
     description: "Один из Лишних"
     stats:
-      skills: "Ядовитый пот"
+      myth: "Йормунганд"
   klyaksa:
     name: "Клякса"
     type: "Интернат"
     description: "Один из Лишних"
     stats:
-      skills: "Ожившие рисунки"
+      myth: "Коробка с карандашами (реликвия)"
   konstantin_buyanovich:
     name: "Константин Буянович Бесммертный"
     description: "Авторитет из 90-ых"
     image: "konstantin_buyanovich.png"
+    stats:
+      myth: "Кощей"
+  kosmonavt:
+    name: "«Космонавт»"
+    description: "Шестиклассник, в инвалидном кресле."
+    stats:
+      myth: "Кой (Титан неба)"
   kvazimodo:
-    name: "Квазимодо"
-    type: "Интернат"
+    name: "«Квазимодо» Катя"
     description: "Одна из Лишних"
     image: "kvazimodo.png"
     stats:
-      skills: "Знание проходов"
+      myth: "Конек Горбунок"
+
+  #L
+  leontiy_zolotarev:
+    name: "Леонтий Золотарев"
+    description: "Член совета директоров"
+    type: "All Imp."
+    stats:
+      myth: "Аполон"
   lolita:
     name: "Лолита Михайловна Ретюнских"
     description: "Доктор наук по философии"
     image: "lolita.png"
+    stats:
+      myth: "Мойра"
+  lyudmila_kharitonova:
+    name: "Людмила Ярославовна Харитонова"
+    description: "Офис менеджер в СОГАЗ"
+    stats:
+      myth: "Триглава"
+
+  #M
   maira_marin:
     name: "Майра Марин"
-    description: "Владелеца Клуба Гаити"
+    description: "Владелеца Клуба Гаити и отеля  Тихий Омут"
+    stats:
+      myth: "Мами Вата"
   maria_makarova:
     name: "Мария Макарова"
     description: "Тренер по Фехтованию"
+    stats:
+      myth: "Марья Моревна"
+  maria_tkachenko:
+    name: "Мария Михайловна Ткаченко"
+    description: "Системный аналитик"
+    stats:
+      myth: "Мэри Поппинс"
+  mihail_bogolyubov:
+    name: "Михаил Боголюбов"
+    description: "Член президиума Верховного суда РФ."
+    stats:
+      myth: "Архангел Михаил"
+
+  #O
+  odrik_ejnansson:
+    name: "Одрик Эйнарссон"
+    description: "Глава международной НКО ASGARD."
+    stats:
+      myth: "Один"
   oleg_sirotkin:
     name: "Олег Сироткин"
     description: "Певец-суперзвезда"
     image: "oleg_sirotkin.png"
 
+  olga_loginova:
+    name: "Ольга Логинова"
+    description: "Солистка группы «Затмение»."
+    stats:
+      myth: "Хель"
+  olga_shestiperova:
+    name: "Ольга Шестиперова"
+    description: "«Девочка» Майры"
   otec_ioan:
     name: "Отец Иоан"
     description: "Священник, владелец купален."
     stats:
-      skills: "Иван Купала"
+      myth: "Купала"
+  otec_ieremiy:
+    name: "Отец Иеремий"
+    description: "Батюшка, в прошлом врач."
+    stats:
+      myth: "Папа Легба"
+
+  #P
+  pavel_borets:
+    name: "Павел «Грозный» Борец"
+    description: "Наемный убийца."
+    stats:
+      myth: "Перун"
+  polina_strastnova:
+    name: "Полина Страстнова"
+    description: "Работница склада"
+    stats:
+      myth: "Пандора"
+  potap_morev:
+    name: "Потап Морев"
+    type: "All Imp."
+    description: "Член совета директоров."
+    stats:
+      myth: "Посейдон"
+  prokopiy_nagorniy:
+    name: "Прокопий Петрович Нагорный"
+    image: "prokopiy_nagorniy.png"
+    description: "Владелец автосервиса «Орел»"
+    stats:
+      myth: "Прометей"
   pugalo:
     name: "Пугало"
     type: "Интернат"
     description: "Одна из колдунов."
     stats:
-      skills: "???"
+      myth: "Нюкта"
+  pyos_druzhok:
+    name: "Пёс Дружок"
+    description: "Пёс похожий на Борзую"
+    stats:
+      myth: "Фенрир"
+
+  #R
+  renata_retunskih:
+    name: "Рената Ретюнских"
+    description: "Сестра-сплетница, сельская интеллигенция."
+    stats:
+      myth: "Мойра"
+  rodion_kotov:
+    name: "Родион Котов"
+    description: "Ведущий, писатель."
+    stats:
+      myth: "Кот Баюн"
   roza:
     name: "Роза"
     type: "Интернат"
     description: "Лидер группы Колдуны"
     stats:
-      skills: "???"
+      myth: "Вакханка"
 
+  #S
   scalpel:
     name: "Скальпель"
     type: "Интернат"
     description: "Один из Лишних"
     image: "scalpel.png"
     stats:
-      skills: "Внушающий страх"
+      myth: "Джек Потрошитель"
   shoker:
-    name: "Клякса"
+    name: "Шокер"
     type: "Интернат"
     description: "Один из Лишних"
     stats:
-      skills: "Электростатическая бомба"
-  strogov:
-    name: "Строгов"
-    description: "Автор-исполнитель"
-    image: "strogov.png"
-  svetlana:
-    name: "Светлана"
-    description: "Учитель биологии, исследователь"
+      myth: "Перун"
+  sofa_cherepanova:
+    name: "Софа Павловна Черепанова"
+    description: "PR-директор"
+    stats:
+      myth: "Персефона"
+  svetlana_kupriyanova:
+    name: "Светлана Куприянова"
+    image: "svetlana_kupriyanova.png"
+    description: "Первая солистка группы «Затмение»"
+    stats:
+      myth: "Банши"
+  svetlana_novikova:
+    name: "Светлана Аркадьевна Новикова"
+    description: "Учительница биологии"
     image: "svetlana.png"
+    stats:
+      myth: "Ехидна"
   svistok:
     name: "Свисток"
     type: "Интернат"
     description: "Один из Мертвецов"
     stats:
-      skills: "Оглушительный свист"
+      myth: "Соловей разбойник"
   svyatoslav_bogolyubov:
     name: "Святослав Боголюбов"
-    description: ""
-    image: "svyatoslav_bogolyubov.png"
     description: "Капитан хоккейной команды"
-  vasiliy:
-    name: "Василий"
-    description: "Работник телестудии"
+    image: "svyatoslav_bogolyubov.png"
+    stats:
+      myth: "Люцифер"
+
+  #T
+  terje_dunar:
+    name: "Терье Дунар"
+    description: "Племянник и ассистент Одрика."
+    stats:
+      myth: "Тор"
+
+  #V
+  valentin_mlanchik:
+    name: "Валентин Максимович Младенчик"
+    description: "Радиоведущий, блогер."
+    stats:
+      myth: "Купидон"
+  vasiliy_lyskov:
+    name: "Василий Георгиевич Лысков"
+    description: "Стартапер"
     image: "vasiliy.png"
-  veronika:
-    name: "Вероника"
-    type: "Гаити"
-    description: "Бармэн в Гаити"
-    image: "veronika.png"
+    stats:
+      myth: "Пифий"
+  velemir_zverev:
+    name: "Велемир «Зверь» Зверев"
+    image: "velemir_zverev.png"
+    description: "Лидер байкерской банды «Адские псы»"
+    stats:
+      myth: "Велес"
+  veronika_sidorenko:
+    name: "Вероника Васильевна Сидоренко"
+    image: "veronika_sidorenko.png"
+    description: "Барменша в Гаити, неформал"
+    stats:
+      myth: "Крокодил Гена"
+  veronika_solopova:
+    name: "Вероника Солопова"
+    description: "Супруга Дмитрия"
+  viktorija_pozdnyakova:
+    name: "Виктория Позднякова"
+    description: "«Девочка» Майры"
   vlad_morozov:
     name: "Влад Морозов"
-    description: ""
+    description: "Музыкант, лидер группы «Затмение»"
     image: "vlad_morozov.png"
+    stats:
+      myth: "Йокуль"
+  vladimir_sidorenko:
+    name: "Владимир Иванович Сидоренко"
+    description: "Оперативник, глава Отдела расследований Бюро"
+    stats:
+      myth: "Глеб Жеглов"
+
+  #Y
   yaroslava_romanchik:
     name: "Ярослава Романчик"
     description: "Студентка. Художница"
     stats:
-      skills: "Одноглазое Лихо"
+      myth: "Одноглазое Лихо"
+
+  #Z
   zinoviy_gromov:
     name: "Зиновий Громов"
-    type: "All'Imp"
+    type: "All Imp."
     description: "Гендиректор All'imp"
     image: "zinoviy_gromov.png"
+    stats:
+      myth: "Зевс"
   zubr:
     name: "Зубр"
     type: "Интернат"
     description: "Лидер группы Куклы."
     stats:
-      skills: "Туман"
-
-
-
+      myth: "Мерлин"

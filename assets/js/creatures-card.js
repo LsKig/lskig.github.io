@@ -31,6 +31,7 @@ class CreatureCard {
       dmg_res: 'Сопротивление к урону',
       dmg_imn: 'Иммунитет к урону',
       con_imn: 'Иммунитет к состоянию',
+      myth: "Мифос",
       sens: 'Чувства',
       languages: 'Языки',
       danger: 'Опасность',
@@ -182,7 +183,7 @@ class CreatureCard {
     }
 
     // ✅ Other stats - только если есть значения
-    const otherKeys = ['sens', 'languages', 'danger', 'mastery'];
+    const otherKeys = ['sens', 'languages', 'danger', 'mastery', 'myth'];
     otherKeys.forEach(key => {
       if (stats[key] !== undefined) {
         html += `
