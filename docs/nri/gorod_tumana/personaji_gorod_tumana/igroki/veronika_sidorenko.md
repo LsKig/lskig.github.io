@@ -9,3 +9,7 @@ parent: Персонажи игроков
 {% include creatures_card_module.html creature_key="veronika_sidorenko" layout="right" %}
 
 Завербована Бюро.
+
+#### Семья:
+
+Брат - Лёша
