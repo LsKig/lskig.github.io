@@ -31,6 +31,7 @@ creatures:
   andrei_vasilievich:
     name: "Андрей Васильевич"
     description: "Профессор, доктор наук"
+    image: "andrei_vasilievich.png"
     stats:
       myth: "Морфей"
   anita_retunskih:
@@ -284,6 +285,7 @@ creatures:
       myth: "Мами Вата"
   maria_makarova:
     name: "Мария Макарова"
+    image: "maria_makarova.png"
     description: "Тренер по Фехтованию"
     stats:
       myth: "Марья Моревна"
@@ -470,6 +472,7 @@ creatures:
       myth: "Йокуль"
   vladimir_sidorenko:
     name: "Владимир Иванович Сидоренко"
+    image: "vladimir_sidorenko.png"
     description: "Оперативник, глава Отдела расследований Бюро"
     stats:
       myth: "Глеб Жеглов"
