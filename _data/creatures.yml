@@ -193,6 +193,7 @@ creatures:
       myth: "Гретель"
   gleb_norkin:
     name: "Глеб Норкин"
+    image: "gleb_norkin.png"
     description: "Независимый журналист"
     stats:
       myth: "Локи"
