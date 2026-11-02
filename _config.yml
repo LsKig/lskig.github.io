@@ -4,9 +4,9 @@ encoding: utf-8
 description: >-
   Сайт для моей базы Obsidian и обмена информацией
 baseurl: ""
-domain: gikls.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: https://gikls.github.io  # the base hostname and protocol for your site, e.g. http://example.com
-github_username:  gikls
+domain: LsKig.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://LsKig.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+github_username:  LsKig
 
 color_scheme: reading
 
@@ -38,7 +38,7 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "default"  # Использует `_layouts/page.html`
+      layout: "default"
 
 creature_cards:
   default_position: "right"
