@@ -2,7 +2,7 @@
 title: Механика
 layout: default
 nav_order: 5
-parent: Примеры
+parent: Упражнения
 description: Учимся читать структуру истории.
 ---
 
